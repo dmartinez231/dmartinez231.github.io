@@ -32,7 +32,14 @@ body{
   height:50vh;
 	background-color:black;
 	opacity: 0.6;
-
 }
-
+.text{
+	color: #ffffff;
+}
+a, h2, span{
+	color: #ffffff;
+}
+a, span{
+	 text-decoration: underline;
+}
 /*END STYLES LOGIN*/
