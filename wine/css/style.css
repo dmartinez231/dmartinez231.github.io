@@ -13,7 +13,7 @@ a{
 }
 
 /*STYLES LOGIN*/
-body{
+body.login{
 	text-align: center;
 	background-image: url(../img/fondo.jpg);
 	background-position: center;
@@ -33,13 +33,16 @@ body{
 	background-color:black;
 	opacity: 0.6;
 }
-.text{
-	color: #ffffff;
+h1.login{
+		font-family: 'Bad Script', cursive;
+		color: #fff;
+	}
+a{
+	 text-decoration: none;
+	 color: #fff;
+	 opacity: 0.7;
 }
-a, h2, span{
-	color: #ffffff;
-}
-a, span{
-	 text-decoration: underline;
-}
+
+
+
 /*END STYLES LOGIN*/
