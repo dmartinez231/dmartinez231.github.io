@@ -11,7 +11,7 @@
 </head>
 <body class="login">
 	<div class="container">
-		<div class="cuadrado">
+		<div class="col-lg-6 col-sm-offset-3" class="cuadrado">
 			<h1 class="login">WINE</h1>
 			<div class="form-group">
 				<a href="registro.html">Crear una Cuenta</a>
@@ -21,15 +21,25 @@
 						<div class="input-group-prepend">
 							<span class="input-group-text"><i class="fa fa-user"></i></span>
 						</div>
-						<input class="form-control" type="text" name="user" value="" placeholder="Usuario">
+						<input class="form-control" type="text" name="user" value="" placeholder="Usuario" required>
 					</div>
 					<div class="input-group mb-3">
 						 <div class="input-group-prepend">
 						   <span class="input-group-text"><i class="fa fa-key"></i></span>
 						 </div>
-						 <input type="password" class="form-control" placeholder="Contraseña">
+						 <input type="password" class="form-control" placeholder="Contraseña" required>
 					</div>
+					<div class="form-check">
+						  <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+						  <label class="form-check-label" for="defaultCheck1">Recordar mis datos</label>
+					</div>
+					<button type="submit" id="form-submit" class="btn btn-success btn-lg pull-right ">Submit</button>
+					<div class="media position-relative">
+						<div class="form-group">
+							<a href="registro.html">Olvide mi contraseña</a>
+						</div>
 			</form>
+			</div>
 		</div>
 	</div>
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>

@@ -15,8 +15,11 @@ a{
 }
 
 /*STYLES LOGIN*/
+.container{
+	padding-top: 50px;
+
+}
 body.login{
-	text-align: center;
 	background-image: url(../img/fondo.jpg);
 	background-position: center;
 	background-repeat: no-repeat;
@@ -38,20 +41,28 @@ body.login{
 h1.login{
 		font-family: 'Bad Script', cursive;
 		color: #fff;
+		text-align: center;
 	}
+
 a{
+		 text-align: center;
 	 text-decoration: none;
 	 color: #fff;
 	 opacity: 0.7;
 }
 
+a:hover{
+  color: #000000;
+}
+
 
 
 /*END STYLES LOGIN*/
+
 /* Start style home*/
 #body-home{
 	background-color: #572364;
-	padding: 20px;	
+	padding: 20px;
 }
 #body-home a{
 	text-decoration: none;
@@ -133,7 +144,7 @@ video{
     margin: 0 auto;
 }
 /*fin navegador*/
-/* Header*/	
+/* Header*/
 
 .container-header{
 	margin-top: 20px;
@@ -174,7 +185,7 @@ video{
 }
 .container-img{
 	border-radius: 50px;
-	overflow: hidden;	
+	overflow: hidden;
 }
 .photo{
 	width: 100%;
