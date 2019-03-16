@@ -1,12 +1,77 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title></title>
-	<link rel="stylesheet" type="text/css" href="style.css">
+	<title>Register</title>
+	<link rel="stylesheet" type="text/css" href="css/style.css">
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
-	
+	<header>
+	</header>
+	<main>
+		<section class="registro">
+			<h1>Registro</h1>
+			<div class="contiene">
+			<form class="registro" action="index.html" method="post">
+				<div class="registro1">
+				<p>
+					<label for="nombre">Nombre y Apellido:</label>
+					<input id="nombre" type="text" name="nombre" value="">
+				</p>
+				<p>
+					<label for="nacimiento">Fecha de nacimiento:</label>
+					<input type="date" name="nacimiento" value="">
+				</p>
+					<br>
+				<p>
+				  <label for="pais">País:</label>
+					<select id="pais" class="" name="pais">
+						<option value="arg">Argentina</option>
+						<option value="uru">Uruguay</option>
+						<option value="bra">Brasil</option>
+						<option value="chi">Chile</option>
+						<option value="col">Colombia</option>
+						<option value="ven">Venezuela</option>
+					</select>
+				</p>
+
+				</div>
+				<div  class="registro2">
+				<p>
+					<label for="mail">e-mail:</label>
+					<input id="mail" type="email" name="mail" value="" required>
+				</p>
+				<p>
+					<label for="pass">Contraseña:</label required>
+					<input id="pass" type="password" name="pass" value="">
+				</p>
+				<p>
+					<label for="confirmpass">Confirmar contraseña:</label>
+					<input id="confirmpass" type="password" name="confirmpass" value="" required>
+				</p>
+				</div>
+				</div>
+
+				<div class="registro3">
+				<p>
+					<label for="info">¿Desea recibir nuestras ofertas mensuales?</label>
+					<br>
+					<input id="" type="radio" name="ofertas" value="si" checked>Sí
+					<input id="" type="radio" name="ofertas" value="no">No
+				</p>
+				<p>
+					<label for="">Capcha</label>
+				</p>
+				<p>
+					<button type="reset" name="limpia">limpiar</button>
+					<button type="submit" name="crea">crear usuario</button>
+				</p>
+				</div>
+			</form>
+		</section>
+	</main>
+	<footer>
+	</footer>
 </body>
 </html>

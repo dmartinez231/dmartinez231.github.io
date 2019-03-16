@@ -11,3 +11,57 @@ li{
 a{
 	text-decoration: none;
 }
+
+/* Formulario de Registro*/
+section.registro {
+	width: 100%;
+	margin: auto;
+	padding: 30px;
+	background-image:url(../images/fondoregistro.jpg);
+	background-size: 100%;
+	background-position: right;
+	background-attachment: fixed;
+	background-repeat: no-repeat;
+	color: white;
+	font-weight: bold;
+	font-family: serif;
+}
+section.registro h1 {
+	  text-align: center;
+		margin-bottom: 30px;
+		font-size: 40px;
+	}
+div.registro1 input, div.registro2 input  {
+	width: 100%;
+}
+
+section.registro input {
+	background-color: white;
+	opacity: 0.7;
+	font-weight: bold;
+}
+
+div.registro {
+	width: 100%;
+	margin: auto;
+	text-align: left;
+}
+
+div.registro3{
+	text-align: center;
+}
+
+@media (min-width: 768px) {
+	div.contiene{
+		overflow: hidden;
+	}
+	div.registro1{
+		width: 45%;
+		float: left;
+		padding-left: 15%;
+	}
+	div.registro2{
+		width: 45%;
+		float: right;
+		padding-right: 15%;
+	}
