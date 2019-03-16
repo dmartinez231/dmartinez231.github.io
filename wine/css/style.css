@@ -25,36 +25,39 @@ body.login{
 	background-repeat: no-repeat;
 	background-attachment: fixed;
 	background-size: cover;
-}
-.cuadrado{
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-	margin: auto;
-	width:50%;
-  height:50vh;
-	background-color:black;
-	opacity: 0.6;
+	 padding-top:10px;
 }
 h1.login{
 		font-family: 'Bad Script', cursive;
 		color: #fff;
 		text-align: center;
 	}
-
 a{
-		 text-align: center;
 	 text-decoration: none;
 	 color: #fff;
 	 opacity: 0.7;
 }
-
-a:hover{
-  color: #000000;
+a:hover, label{
+  color: #fff;
 }
-
+.center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+}
+.form {
+  width: 450px;
+}
+.p-3{
+	background-color:#000000;
+	opacity: 0.6;
+}
+footer {
+  background-color:  #000000;
+  color: white;
+  padding: 15px;
+}
 
 
 /*END STYLES LOGIN*/
@@ -67,7 +70,7 @@ a:hover{
 =======
 /* Start style body home*/
 #body-home{
-	padding: 20px;	
+	padding: 20px;
 >>>>>>> bfb2798c21b66a20f30a0d16da9b3a02730470fe
 }
 #body-home a{
@@ -153,7 +156,7 @@ video{
 /* Header*/
 =======
 /*End navegador*/
-/*Start Header*/	
+/*Start Header*/
 >>>>>>> bfb2798c21b66a20f30a0d16da9b3a02730470fe
 
 .container-header{
