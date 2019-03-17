@@ -14,11 +14,26 @@ a{
 	text-decoration: none;
 }
 
-p, i, .list-inline-item, .btn-primary, .form-check-label, .create, .forgot{
+p, i, p button,  .list-inline-item, .btn-primary, .form-check-label, .create, .forgot{
 	font-family: 'Oswald', sans-serif;
 	letter-spacing: 2px;
+	font-weight: bold;
+}
+button,.btn-primary {
+	border-radius: 5px;
+	padding: 5px;
+	background-color: #B31C17;
+	color: white;
+	border-color: #B31C17;
+	align-items: center;
+	padding-bottom: 10px;
 }
 
+button:hover,.btn-primary:hover {
+	background-color: #3D3D45;
+	border: none;
+
+}
 /* Formulario de Registro*/
 
 
@@ -31,11 +46,22 @@ section.registro {
 	background-position: right;
 	background-attachment: fixed;
 	background-repeat: no-repeat;
+	background-size: cover;
 	color: white;
 	font-weight: bold;
 	font-family: serif;
 }
-
+div.cajanegra {
+	background-color:#000000;
+	opacity: 0.6;
+	width: 60%;
+	margin: 0 auto;
+	padding-top: 40px;
+	padding-bottom: 30px;
+	border-width: 2px;
+	border-color: white;
+	border-style: solid;
+}
 section.registro h1 {
 	  text-align: center;
 		margin-bottom: 30px;
@@ -68,7 +94,7 @@ div.registro3{
 
 }
 body.login{
-	background-image: url(../img/fondo.jpg);
+	background-image: url(../img/fondoregistro2.jpg);
 	background-position: center;
 	background-repeat: no-repeat;
 	background-attachment: fixed;
@@ -378,6 +404,7 @@ nav.container-navegador h2{
 		float: right;
 		padding-right: 15%;
 }
+
 }
 
 /*fin styles home*/
