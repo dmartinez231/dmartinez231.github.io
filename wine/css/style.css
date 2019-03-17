@@ -1,5 +1,4 @@
 /*reseteos generales*/
-
 *{
 	box-sizing: border-box;
 	margin:0px;
@@ -15,7 +14,6 @@ a{
 	text-decoration: none;
 }
 
-/*<<<<<<< HEAD
 /* Formulario de Registro*/
 section.registro {
 	width: 100%;
@@ -30,55 +28,32 @@ section.registro {
 	font-weight: bold;
 	font-family: serif;
 }
-
 section.registro h1 {
 	  text-align: center;
 		margin-bottom: 30px;
 		font-size: 40px;
 	}
-
 section.registro p {
 	margin: 10px;
 	padding: 10px;
 }
-
-
-
 div.registro1 input, div.registro2 input  {
 	width: 100%;
 }
-
 section.registro input {
 	background-color: white;
 	opacity: 0.7;
 	font-weight: bold;
 }
-
 div.registro {
 	width: 100%;
 	margin: auto;
 	text-align: left;
 }
-
 div.registro3{
 	text-align: center;
 }
 
-@media (min-width: 768px) {
-	div.contiene{
-		overflow: hidden;
-	}
-	div.registro1{
-		width: 45%;
-		float: left;
-		padding-left: 15%;
-	}
-	div.registro2{
-		width: 45%;
-		float: right;
-		padding-right: 15%;
-	}
-=======
 /*STYLES LOGIN*/
 .container{
 	padding-top: 50px;
@@ -92,7 +67,7 @@ body.login{
 	background-size: cover;
 	 padding-top:10px;
 }
-h1.login{
+h1.login {
 		font-family: 'Bad Script', cursive;
 		color: #fff;
 		text-align: center;
@@ -130,7 +105,7 @@ footer {
 #body-home{
 	background-color: #572364;
 	padding: 20px;
-=======
+
 /* Start style body home*/
 #body-home{
 	padding: 20px;
@@ -216,11 +191,10 @@ video{
 }
 /*<<<<<<< HEAD*/
 /*fin navegador*/
-/* Header*/
-=======
+/* Header*//*
+=======*/
 /*End navegador*/
 /*Start Header*/
->>>>>>> bfb2798c21b66a20f30a0d16da9b3a02730470fe
 
 .container-header{
 	margin-top: 20px;
@@ -309,7 +283,21 @@ video{
 		margin: 0 auto;
 		margin-top: 20px;
 	}
+	div.contiene{
+		overflow: hidden;
+	}
+	div.registro1{
+		width: 45%;
+		float: left;
+		padding-left: 15%;
+	}
+	div.registro2{
+		width: 45%;
+		float: right;
+		padding-right: 15%;
+	}
 }
+
 @media only screen and (min-width : 1224px) {
 	#body-home{
 		padding: 0px;
@@ -363,10 +351,7 @@ video{
 
 	}
 }
-<<<<<<< HEAD
+
 /*fin styles home*/
-=======
 /*End media queries*/
 /*End styles home*/
->>>>>>> bfb2798c21b66a20f30a0d16da9b3a02730470fe
->>>>>>> ddafedebaa8313a40c961b9ef7636d7e9b1ee336
