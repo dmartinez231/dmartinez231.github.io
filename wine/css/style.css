@@ -99,7 +99,6 @@ footer {
 
 
 /*END STYLES LOGIN*/
-/* <<<<<<< HEAD*/
 
 /* Start style home*/
 #body-home{
@@ -107,9 +106,8 @@ footer {
 	padding: 20px;
 
 /* Start style body home*/
-#body-home{
+#body-home
 	padding: 20px;
->>>>>>> bfb2798c21b66a20f30a0d16da9b3a02730470fe
 }
 #body-home a{
 	text-decoration: none;
@@ -117,7 +115,7 @@ footer {
 h1,h2{
 	font-family: 'Bad Script', cursive;
 }
-video{
+.background-video{
 	display: none;
 }
 .box-white{
@@ -189,10 +187,9 @@ video{
     margin: 0 auto;
     font-weight: 700;
 }
+
 /*<<<<<<< HEAD*/
 /*fin navegador*/
-/* Header*//*
-=======*/
 /*End navegador*/
 /*Start Header*/
 
@@ -295,14 +292,13 @@ video{
 		width: 45%;
 		float: right;
 		padding-right: 15%;
-	}
 }
 
 @media only screen and (min-width : 1224px) {
 	#body-home{
 		padding: 0px;
 	}
-	video{
+	.background-video{
 		display: block;
 		position: fixed;
 		min-width: 100%;
