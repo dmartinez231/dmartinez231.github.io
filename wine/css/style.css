@@ -14,7 +14,6 @@ a{
 	text-decoration: none;
 }
 
-<<<<<<< HEAD
 /* Formulario de Registro*/
 section.registro {
 	width: 100%;
@@ -54,21 +53,6 @@ div.registro3{
 	text-align: center;
 }
 
-@media (min-width: 768px) {
-	div.contiene{
-		overflow: hidden;
-	}
-	div.registro1{
-		width: 45%;
-		float: left;
-		padding-left: 15%;
-	}
-	div.registro2{
-		width: 45%;
-		float: right;
-		padding-right: 15%;
-	}
-=======
 /*STYLES LOGIN*/
 .container{
 	padding-top: 50px;
@@ -114,17 +98,17 @@ footer {
 
 
 /*END STYLES LOGIN*/
-<<<<<<< HEAD
+
 
 /* Start style home*/
 #body-home{
 	background-color: #572364;
 	padding: 20px;
-=======
+}
+
 /* Start style body home*/
 #body-home{
 	padding: 20px;
->>>>>>> bfb2798c21b66a20f30a0d16da9b3a02730470fe
 }
 #body-home a{
 	text-decoration: none;
@@ -132,7 +116,7 @@ footer {
 h1,h2{
 	font-family: 'Bad Script', cursive;
 }
-video{
+.background-video{
 	display: none;
 }
 .box-white{
@@ -204,13 +188,9 @@ video{
     margin: 0 auto;
     font-weight: 700;
 }
-<<<<<<< HEAD
-/*fin navegador*/
-/* Header*/
-=======
+
 /*End navegador*/
 /*Start Header*/
->>>>>>> bfb2798c21b66a20f30a0d16da9b3a02730470fe
 
 .container-header{
 	margin-top: 20px;
@@ -299,12 +279,27 @@ video{
 		margin: 0 auto;
 		margin-top: 20px;
 	}
+
+	div.contiene{
+		overflow: hidden;
+	}
+	div.registro1{
+		width: 45%;
+		float: left;
+		padding-left: 15%;
+	}
+	div.registro2{
+		width: 45%;
+		float: right;
+		padding-right: 15%;
+	}	
+
 }
 @media only screen and (min-width : 1224px) {
 	#body-home{
 		padding: 0px;
 	}
-	video{
+	.background-video{
 		display: block;
 		position: fixed;
 		min-width: 100%;
@@ -353,10 +348,5 @@ video{
 
 	}
 }
-<<<<<<< HEAD
-/*fin styles home*/
-=======
 /*End media queries*/
 /*End styles home*/
->>>>>>> bfb2798c21b66a20f30a0d16da9b3a02730470fe
->>>>>>> ddafedebaa8313a40c961b9ef7636d7e9b1ee336
