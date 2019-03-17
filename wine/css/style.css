@@ -1,4 +1,5 @@
 /*reseteos generales*/
+
 *{
 	box-sizing: border-box;
 	margin:0px;
@@ -19,7 +20,7 @@ section.registro {
 	width: 100%;
 	margin: auto;
 	padding: 30px;
-	background-image:url(../images/fondoregistro.jpg);
+	background-image:url(../img/fondoregistro.jpg);
 	background-size: 100%;
 	background-position: right;
 	background-attachment: fixed;
@@ -28,11 +29,20 @@ section.registro {
 	font-weight: bold;
 	font-family: serif;
 }
+
 section.registro h1 {
 	  text-align: center;
 		margin-bottom: 30px;
 		font-size: 40px;
 	}
+
+section.registro p {
+	margin: 10px;
+	padding: 10px;
+}
+
+
+
 div.registro1 input, div.registro2 input  {
 	width: 100%;
 }
@@ -98,7 +108,6 @@ footer {
 
 
 /*END STYLES LOGIN*/
-
 
 /* Start style home*/
 #body-home{
@@ -188,6 +197,10 @@ h1,h2{
     margin: 0 auto;
     font-weight: 700;
 }
+
+/*<<<<<<< HEAD*/
+/*fin navegador*/
+/* Header*/
 
 /*End navegador*/
 /*Start Header*/
