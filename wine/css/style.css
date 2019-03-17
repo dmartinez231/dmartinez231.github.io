@@ -15,6 +15,7 @@ a{
 }
 
 /* Formulario de Registro*/
+
 section.registro {
 	width: 100%;
 	margin: auto;
@@ -28,6 +29,7 @@ section.registro {
 	font-weight: bold;
 	font-family: serif;
 }
+
 section.registro h1 {
 	  text-align: center;
 		margin-bottom: 30px;
@@ -65,7 +67,6 @@ body.login{
 	background-repeat: no-repeat;
 	background-attachment: fixed;
 	background-size: cover;
-	 padding-top:10px;
 }
 h1.login {
 		font-family: 'Bad Script', cursive;
@@ -95,6 +96,7 @@ a:hover, label{
 }
 footer {
   color: #fff;
+	background-color: black;
 }
 
 
@@ -114,6 +116,10 @@ footer {
 }
 h1,h2{
 	font-family: 'Bad Script', cursive;
+}
+h2{
+	font-size: 20px;
+	color: white;
 }
 .background-video{
 	display: none;
@@ -293,11 +299,16 @@ h1,h2{
 		float: right;
 		padding-right: 15%;
 }
+}
 
 @media only screen and (min-width : 1224px) {
 	#body-home{
 		padding: 0px;
 	}
+nav.container-navegador h2{
+	margin: 50% auto;
+}
+
 	.background-video{
 		display: block;
 		position: fixed;
@@ -346,6 +357,19 @@ h1,h2{
 		color: black;
 
 	}
+	div.contiene{
+		overflow: hidden;
+	}
+	div.registro1{
+		width: 45%;
+		float: left;
+		padding-left: 15%;
+	}
+	div.registro2{
+		width: 45%;
+		float: right;
+		padding-right: 15%;
+}
 }
 
 /*fin styles home*/
