@@ -14,7 +14,13 @@ a{
 	text-decoration: none;
 }
 
+p, i, .list-inline-item li, button.btn btn-primary {
+	font-family: 'Oswald', sans-serif;
+	letter-spacing: 2px;
+}
+
 /* Formulario de Registro*/
+
 
 section.registro {
 	width: 100%;
@@ -340,6 +346,7 @@ nav.container-navegador h2{
 		background-color: rgba(0,0,0,0.5);
 		padding: 5px;
 		box-shadow: 0 0 50px;
+		background-color: black;
 	}
 	.list-menu{
 		height: auto;
