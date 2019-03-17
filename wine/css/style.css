@@ -292,8 +292,8 @@ h1,h2{
 		width: 45%;
 		float: right;
 		padding-right: 15%;
+	}
 }
-
 @media only screen and (min-width : 1224px) {
 	#body-home{
 		padding: 0px;
