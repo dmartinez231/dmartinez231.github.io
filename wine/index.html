@@ -11,10 +11,10 @@
 	<link rel="stylesheet" type="text/css" href="css/style.css">
 </head>
 <body id="body-home" class="login">
-	<video class="background-video" src="video/videowine.mp4" alt="wine" poster="img/fondo.jpg" autoplay loop muted></video>
+	<video class="background-video" src="video/videowine.mp4" alt="wine" poster="img/fondoregistro2.jpg" autoplay loop muted></video>
 	<nav class="container-navegador">
 		<div id="logo">
-			<h2 class="marca" href="index.html" >WINE </h2>
+			<h2 class="marca"><a href="index.html">WINE</a></h2>
 		</div>
 		<div id="menu">
 			<div class="control-menu">
@@ -35,7 +35,7 @@
 	     					 <a href="#">Compras</a>
 	     				</li>
 	     				<li>
-	     					 <a href="index.html">Como trabajamos</a>
+	     					 <a href="#como-trabajamos">Como trabajamos</a>
 	     				</li>
 			</ul>
 		</div>
@@ -44,14 +44,14 @@
 	</div>
 	<header class="container-header">
 		<h1 class="marca">WINE</h1>
-		<p>Cada momento tiene un buen vino y en Wine te facilitamos su elección. Dar con el vino indicado es tan importante como la buena compañía en un momento especial. Sorprende a los tuyos y regala a tu paladar el sabor indicado para cada instante.</p>
+		<p id="texto-wine">Cada momento tiene un buen vino y en Wine te facilitamos su elección. Dar con el vino indicado es tan importante como la buena compañía en un momento especial. Sorprende a los tuyos y regala a tu paladar el sabor indicado para cada instante.</p>
 	</header>
 	<main class="container-section">
 		<section class="option" id="option1">
 			<div class="container-img">
 				<img class="photo" src="img/winetinto.jpg" alt="wine tinto">
 			</div>
-			<h2>Grape</h2>
+			<h2 class="titulos-section">Grape</h2>
 			<p>Una vez en la bodega, existen dos métodos de elaboración: el de maceración carbónica, con uva entera y confinada (tradicional de los corcheros, para su comercio temprano) y otro en el que se elimina el raspón del racimo y se rompe la uva antes de la fermentación por levaduras (utilizado por las empresas bodegueras, para destinarlos a crianza).
 			La uva no se lava para que las levaduras que se encuentran sobre el fruto ayuden en la fermentación. Sin embargo, es muy importante el cuidado de la higiene previo a su posterior proceso.</p>
 		</section>
@@ -59,22 +59,24 @@
 			<div class="container-img">
 				<img class="photo" src="img/winewhite.jpg" alt="wine white">
 			</div>
-			<h2>White Grape</h2>
+			<h2 class="titulos-section">White Grape</h2>
 			<p>Las uvas blancas que producen principalmente vinos blancos son de color verde o amarillo, una variedad muy extendida en el mundo, por lo cual este vino es producido en muchas zonas del planeta. ... También hay variedades de uva negra, como la pinot noir, utilizadas para producir vino blanco o champán.</p>
 		</section>
 		<section class="option" id="option3">
 			<div class="container-img">
 			<img class="photo" src="img/winepink.jpg" alt="wine pink">
 			</div>
-			<h2>Pink Grape</h2>
+			<h2 class="titulos-section">Pink Grape</h2>
 			<p>El vino rosado. Casi siempre cuando hablamos de vino solemos pensar en vinos tintos o en vinos blancos, pero poco se tiene en cuenta el vino rosado, con su color particular, su carácter y elegancia que hace despertar el gusto en todos los sentidos. Elegante y versátil, así es el vino rosado con una historia dudosa.</p>
 		</section>
 	</main>
-	<footer class="container-footer">
-		<h3  id="como-trabajamos">Como trabajamos</h3>
+	<h3 id="como-trabajamos">Como trabajamos</h3>
+	<div class="container-footer">
 		<div class="container-video">
 			<iframe width="560" height="315"src="https://www.youtube.com/embed/5o5RnrcdEcg?autoplay=1&controls=1&loop=1&rel=0&showinfo=0&modestbranding=0&mute=1&enablejsapi=1"></iframe>
 		</div>
+	</div>
+	<footer>
 		<div class="container">
 			<ul class="list-unstyled list-inline text-right">
 				<li class="list-inline-item">Contactanos:</li>
@@ -99,11 +101,11 @@
 						<i class="fa fa-instagram"></i>
 					</a>
 				</li>
-			</ul>
-		<div class="footer-copyright text-center py-3">© 2019 Copyright:
-			<a href="https://dmartinez231.github.io/Trabajo-grupal/wine/">Wine.com</a>
+			</ul>	
+			<div class="footer-copyright text-center py-3">© 2019 Copyright:
+				<a href="https://dmartinez231.github.io/Trabajo-grupal/wine/">Wine.com</a>
+			</div>
 		</div>
-	</div>
 	</footer>
 </body>
 </html>

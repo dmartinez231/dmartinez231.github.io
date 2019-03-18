@@ -35,57 +35,11 @@ button:hover,.btn-primary:hover {
 
 }
 /* Formulario de Registro*/
-
-
-section.registro {
+.registros .input-group-prepend{
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
 	width: 100%;
-	margin: auto;
-	padding: 30px;
-	background-image:url(../img/fondoregistro2.jpg);
-	background-size: 100%;
-	background-position: right;
-	background-attachment: fixed;
-	background-repeat: no-repeat;
-	background-size: cover;
-	color: white;
-	font-weight: bold;
-	font-family: serif;
-}
-div.cajanegra {
-	background-color:#000000;
-	opacity: 0.6;
-	width: 60%;
-	margin: 0 auto;
-	padding-top: 40px;
-	padding-bottom: 30px;
-	border-width: 2px;
-	border-color: white;
-	border-style: solid;
-}
-section.registro h1 {
-	  text-align: center;
-		margin-bottom: 30px;
-		font-size: 40px;
-	}
-section.registro p {
-	margin: 10px;
-	padding: 10px;
-}
-div.registro1 input, div.registro2 input  {
-	width: 100%;
-}
-section.registro input {
-	background-color: white;
-	opacity: 0.7;
-	font-weight: bold;
-}
-div.registro {
-	width: 100%;
-	margin: auto;
-	text-align: left;
-}
-div.registro3{
-	text-align: center;
 }
 
 /*STYLES LOGIN*/
@@ -117,10 +71,6 @@ a:hover, label{
   display: flex;
   align-items: center;
   justify-content: center;
-  min-height: 100vh;
-}
-.form {
-  width: 450px;
 }
 .p-3{
 	background-color:#000000;
@@ -136,13 +86,9 @@ footer {
 
 /* Start style home*/
 #body-home{
-	background-color: #572364;
-	padding: 20px;
-
-/* Start style body home*/
-#body-home
 	padding: 20px;
 }
+/* Start style body home*/
 #body-home a{
 	text-decoration: none;
 }
@@ -161,11 +107,10 @@ h2{
 }
 /*end style body home*/
 /*start navegador*/
-#logo img{
-	height: 40px;
-}
+
 #logo{
 	float: right;
+	margin-top: 10px;
 }
 .container-navegador{
 	overflow: hidden;
@@ -226,7 +171,6 @@ h2{
     font-weight: 700;
 }
 
-/*<<<<<<< HEAD*/
 /*fin navegador*/
 /*End navegador*/
 /*Start Header*/
@@ -236,25 +180,13 @@ h2{
 	width: 100%;
 	text-align: center;
 }
-.container-logo{
-	width: 100px;
-	height: 100px;
-	overflow: hidden;
-	border-radius: 30% 50% 30% 50%;
-	border:1px solid black;
-	margin: auto;
-}
-.container-logo img{
-	width: 100%;
-	height: 100%;
-}
 .container-header h1{
 	color: black;
 	margin-top: 30px;
 	font-family: 'Bad Script', cursive;
 }
 .container-header p{
-	color: black;
+	color: white;
 	margin-top: 20px;
 	letter-spacing: 3px;
 }
@@ -275,7 +207,7 @@ h2{
 .photo{
 	width: 100%;
 }
-.opcion h2{
+.titulos-section{
 	margin-top: 20px;
 }
 /* end contenido */
@@ -295,9 +227,14 @@ h2{
 .container-footer{
 	margin-top: 30px;
 	text-align: center;
+	margin-bottom: 30px;
 }
-.container-footer h3{
+#como-trabajamos{
+	margin-top: 20px;
 	text-transform: uppercase;
+	text-align: center;
+	color: white;
+	font-family: 'Oswald', sans-serif;
 }
 .container-footer p{
 	margin: 30px 10px;
@@ -306,6 +243,10 @@ h2{
 /* End contenido footer*/
 /* Start media queries*/
 @media only screen and (min-width : 768px) and (max-width: 1223px) {
+	
+	#logo{
+		margin-top: 0px;
+	}
 	.container-section{
 		display: flex;
 		flex-wrap: wrap;
@@ -318,23 +259,16 @@ h2{
 		margin: 0 auto;
 		margin-top: 20px;
 	}
-	div.contiene{
+	.contenedor-registros{
 		overflow: hidden;
-	}
-	div.registro1{
-		width: 45%;
-		float: left;
-		padding-left: 15%;
-	}
-	div.registro2{
-		width: 45%;
-		float: right;
-		padding-right: 15%;
 	}
 }
 
 
 @media only screen and (min-width : 1224px) {
+	#logo{
+		margin-top: 0px;
+	}
 	#body-home{
 		padding: 0px;
 	}
@@ -391,19 +325,12 @@ nav.container-navegador h2{
 		color: black;
 
 	}
-	div.contiene{
+	.contenedor-registros{
 		overflow: hidden;
 	}
-	div.registro1{
-		width: 45%;
-		float: left;
-		padding-left: 15%;
+	#texto-wine{
+		color: black;
 	}
-	div.registro2{
-		width: 45%;
-		float: right;
-		padding-right: 15%;
-}
 
 }
 

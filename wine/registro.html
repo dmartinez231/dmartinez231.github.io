@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Register</title>
+	<title>Register | Wine</title>
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 	<link href="https://fonts.googleapis.com/css?family=Bad+Script" rel="stylesheet">
@@ -10,13 +10,10 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
-<body>
-	<header>
-
-	</header>
+<body id="body-home" class="login">
 	<nav class="container-navegador">
 		<div id="logo">
-				<h2  class="marca"> <a href="index.html"></a>WINE </h2>
+				<h2 class="marca"><a href="index.html">WINE</a></h2>
 		</div>
 		<div id="menu">
 			<div class="control-menu">
@@ -37,81 +34,104 @@
 								 <a href="#">Compras</a>
 							</li>
 							<li>
-								 <a href="index.html">Como trabajamos</a>
+								 <a href="index.html#como-trabajamos">Como trabajamos</a>
 							</li>
 			</ul>
 		</div>
 	</nav>
-	<main>
-		<section class="registro">
-			<div class="cajanegra">
-
-
-			<h1>Registro</h1>
-			<div class="contiene">
-			<form class="registro" action="index.html" method="post">
-				<div class="registro1">
-				<p>
-					<label for="nombre">Nombre y Apellido:</label>
-					<input id="nombre" type="text" name="nombre" value="">
-				</p>
-				<p>
-					<label for="nacimiento">Fecha de nacimiento:</label>
-					<input type="date" name="nacimiento" value="">
-				</p>
-					<br>
-				<p>
-				  <label for="pais">País:</label>
-					<select id="pais" class="" name="pais">
-						<option value="arg">Argentina</option>
-						<option value="uru">Uruguay</option>
-						<option value="bra">Brasil</option>
-						<option value="chi">Chile</option>
-						<option value="col">Colombia</option>
-						<option value="ven">Venezuela</option>
-					</select>
-				</p>
-
-				</div>
-				<div  class="registro2">
-				<p>
-					<label for="mail">e-mail:</label>
-					<input id="mail" type="email" name="mail" value="" required>
-				</p>
-				<p>
-					<label for="pass">Contraseña:</label required>
-					<input id="pass" type="password" name="pass" value="">
-				</p>
-				<p>
-					<label for="confirmpass">Confirmar contraseña:</label>
-					<input id="confirmpass" type="password" name="confirmpass" value="" required>
-				</p>
-				</div>
-				</div>
-
-				<div class="registro3">
-				<p>
-					<label for="info">¿Desea recibir nuestras ofertas mensuales?</label>
-					<br>
-					<input id="" type="radio" name="ofertas" value="si" checked>Sí
-					<input id="" type="radio" name="ofertas" value="no">No
-				</p>
-				<p>
-					<label for="">Capcha</label>
-				</p>
-				<p>
-					<button type="reset" name="limpia">limpiar</button>
-					<button type="submit" name="crea">crear usuario</button>
-				</p>
-				</div>
-			</form>
+	<div class="registros">
+	<section class="container">
+			<div class="center">
+				<form action="#" class="border p-3 form" method="post">
+					<h1 class="login">Registro</h1>
+					<div class="form-group text-center">					
+					<hr>
+						<div class="form-row">
+							<div class="form-group col-md-6">
+								<div class="input-group mb-3">
+									<div class="input-group-prepend">
+										<label  class="form-check-label" for="nombre">Nombre y Apellido:</label>
+										<input class="form-control" id="nombre" type="text" name="nombre" value="">
+									</div>
+								</div>
+							</div>
+							<div class="form-group col-md-6">
+								<div class="input-group mb-3">
+									<div class="input-group-prepend">
+										<label class="form-check-label" for="nacimiento">Fecha de nacimiento:</label>
+										<input class="form-control" type="date" name="nacimiento" value="">
+									</div >
+								</div>
+							</div>
+						</div>
+						<div class="form-row">
+							<div class="form-group col-md-6">						 	    
+						 	    <div class="input-group mb-3">
+						 	    	<div class="input-group-prepend">
+						 	    		<label class="form-check-label" for="pais">País:</label>
+										<select class="form-control" id="pais" class="" name="pais">
+											<option value="arg">Argentina</option>
+											<option value="uru">Uruguay</option>
+											<option value="bra">Brasil</option>
+											<option value="chi">Chile</option>
+											<option value="col">Colombia</option>
+											<option value="ven">Venezuela</option>
+										</select>
+									</div>
+								</div>
+							</div>
+							<div class="form-group col-md-6">
+								<div class="input-group mb-3">
+									<div class="input-group-prepend">
+										<label class="form-check-label" for="mail">e-mail:</label>
+										<input class="form-control" id="mail" type="email" name="mail" value="" required>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="form-row">
+							<div class="form-group col-md-6">
+								<div class="input-group mb-3">
+									<div class="input-group-prepend">
+										<label class="form-check-label" for="pass">Contraseña:</label required>
+										<input class="form-control" id="pass" type="password" name="pass" value="">
+									</div>
+								</div>
+							</div>
+							<div class="form-group col-md-6">
+								<div class="input-group mb-3">
+									<div class="input-group-prepend">
+										<label class="form-check-label" for="confirmpass">Confirmar contraseña:</label>
+										<input class="form-control" id="confirmpass" type="password" name="confirmpass" value="" required>
+									</div>
+								</div>
+							</div>
+						</div>		
+						<div class="form-group text-center">
+								<label class="form-check-label" for="info">¿Desea recibir nuestras ofertas mensuales?</label>
+							<br>
+							<div class="form-row">
+								<div class="form-group col-md-6">
+										<input class="form-check-input" id="" type="radio" name="ofertas" value="si" checked><label class="form-check-label"> Sí</label>
+								</div>
+								<div class="form-group col-md-6">
+										<input class="form-check-input" id="" type="radio" name="ofertas" value="no"><label class="form-check-label"> No</label>
+								</div>
+							</div>
+							<div class="form-group">
+								<div class="g-recaptcha" data-sitekey="6LcePAATAAAAAGPRWgx90814DTjgt5sXnNbV5WaW">
+								</div>
+							</div>
+							<div class="form-group text-center">
+								<button class="btn btn-primary" type="reset" name="limpia">limpiar</button>
+								<button class="btn btn-primary" type="submit" name="crea">crear usuario</button>
+							</div>
+					</div>
+					</div>
+				</form>
 			</div>
 		</section>
-		<script src='https://www.google.com/recaptcha/api.js'></script>
-		<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-	</main>
+	</div>
 	<footer class="">
 	    <div class="container">
 	      <ul class="list-unstyled list-inline text-right">
@@ -143,5 +163,9 @@
 	    </div>
 		</div>
 	  </footer>
+<script src='https://www.google.com/recaptcha/api.js'></script>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 </body>
 </html>

@@ -8,12 +8,12 @@
 	<link href="https://fonts.googleapis.com/css?family=Bad+Script" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
 	<link rel="stylesheet" type="text/css" href="css/style.css">
-	<title>Login|Wine</title>
+	<title>Login | Wine</title>
 </head>
-<body class="login">
+<body id="body-home" class="login">
 	<nav class="container-navegador">
 		<div id="logo">
-			<h2 href="index.html" class="marca">WINE </h2>
+			<h2 class="marca"><a href="index.html">WINE</a></h2>
 		</div>
 		<div id="menu">
 			<div class="control-menu">
@@ -34,56 +34,56 @@
 	     					 <a href="#">Compras</a>
 	     				</li>
 	     				<li>
-	     					 <a href="index.html">Como trabajamos</a>
+	     					 <a href="index.html#como-trabajamos">Como trabajamos</a>
 	     				</li>
 			</ul>
 		</div>
 	</nav>
 	<div class="container">
-  <div class="center">
-    <form action="#" class="border p-3 form">
-			<h1 class="login">WINE</h1>
-			<hr>
-			<div class="form-group text-center">
-				<a  class="create" href="registro.html">Crear una Cuenta</a>
-			</div>
-      <div class="form-group">
-				<div class="input-group mb-3">
-					<div class="input-group-prepend">
-						<span class="input-group-text"><i class="fa fa-user"></i></span>
+  		<div class="center">
+		    <form action="#" class="border p-3 form">
+				<h1 class="login">WINE</h1>
+				<hr>
+				<div class="form-group text-center">
+					<a  class="create" href="registro.html">Crear una Cuenta</a>
+				</div>
+		        <div class="form-group">
+					<div class="input-group mb-3">
+						<div class="input-group-prepend">
+							<span class="input-group-text"><i class="fa fa-user"></i></span>
+						</div>
+						<input class="form-control" type="text" name="user" value="" placeholder="Usuario" required>
 					</div>
-					<input class="form-control" type="text" name="user" value="" placeholder="Usuario" required>
 				</div>
-			 </div>
-      <div class="form-group">
-				<div class="input-group mb-3">
-					 <div class="input-group-prepend">
-						 <span class="input-group-text"><i class="fa fa-key"></i></span>
-					 </div>
-					 <input type="password" class="form-control" placeholder="Contraseña" required>
-				</div>
-      </div>
-			<div class="form-row">
-		    <div class="form-group col-md-6">
+		    	<div class="form-group">
+					<div class="input-group mb-3">
+						<div class="input-group-prepend">
+						    <span class="input-group-text"><i class="fa fa-key"></i></span>
+						</div>
+						<input type="password" class="form-control" placeholder="Contraseña" required>
+					</div>
+      			</div>
+				<div class="form-row">
+		    		<div class="form-group col-md-6">
 						<div class="form-check">
 							<input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
 							<label class="form-check-label" for="defaultCheck1">Recordar mis datos</label>
+			    		</div>
+		  			</div>
+			    	<div class="form-group col-md-5">
+							<a href="#" class="forgot">Recuperar contraseña</a>
+					</div>
 			    </div>
-		  	</div>
-		    <div class="form-group col-md-5">
-						<a href="#" class="forgot">Recuperar contraseña</a>
+			    <div class="form-group">
+					<div class="g-recaptcha" data-sitekey="6LcePAATAAAAAGPRWgx90814DTjgt5sXnNbV5WaW">
+					</div>
 				</div>
-    </div>
-		<div class="form-group text-center">
-      <button type="submit" class="btn btn-primary">Ingresar</button>
+				<div class="form-group text-center">
+			      	<button type="submit" class="btn btn-primary">Ingresar</button>
+				</div>
+		    </form>
 		</div>
-		<div class="form-group">
-			<div class="g-recaptcha" data-sitekey="6LcePAATAAAAAGPRWgx90814DTjgt5sXnNbV5WaW">
-			</div>
-		</div>
-    </form>
-  </div>
-</div>
+	</div>
 <script src='https://www.google.com/recaptcha/api.js'></script>
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
