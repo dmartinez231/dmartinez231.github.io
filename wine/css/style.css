@@ -308,7 +308,6 @@ h2{
 		justify-content: space-around;
 		background-color: rgba(0,0,0,0.5);
 		padding: 5px;
-		box-shadow: 0 0 50px;
 	}
 	.list-menu{
 		height: auto;
