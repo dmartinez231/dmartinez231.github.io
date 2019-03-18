@@ -14,12 +14,11 @@ a{
 	text-decoration: none;
 }
 
-p, i, p button,  .list-inline-item, .btn-primary, .form-check-label, .create, .forgot{
+p, i, .list-inline-item, .btn-primary, .form-check-label, .create, .forgot{
 	font-family: 'Oswald', sans-serif;
 	letter-spacing: 2px;
-	font-weight: bold;
 }
-button,.btn-primary {
+.btn-primary {
 	border-radius: 5px;
 	padding: 5px;
 	background-color: #B31C17;
@@ -77,8 +76,9 @@ a:hover, label{
 	opacity: 0.6;
 }
 footer {
-  color: #fff;
-	background-color: black;
+	color: #fff;
+	background-color: rgba(0,0,0,0.5);
+	margin-top: 30px;
 }
 
 
@@ -196,9 +196,12 @@ h2{
 .option{
 	text-align: center;
 	margin-top: 30px;
-	background-color: #D2C8C8;
+	background-color: rgba(113,9,2,0.8);
 	border-radius: 50px;
 	padding: 20px;
+}
+.option p{
+	color: white;
 }
 .container-img{
 	border-radius: 50px;
@@ -209,6 +212,7 @@ h2{
 }
 .titulos-section{
 	margin-top: 20px;
+	font-size: 30px;
 }
 /* end contenido */
 /* Start contenido footer*/
@@ -272,10 +276,9 @@ h2{
 	#body-home{
 		padding: 0px;
 	}
-nav.container-navegador h2{
-	margin: 50% auto;
-}
-
+	.container-navegador h2{
+		margin: 50% auto;
+	}
 	.background-video{
 		display: block;
 		position: fixed;
@@ -306,7 +309,6 @@ nav.container-navegador h2{
 		background-color: rgba(0,0,0,0.5);
 		padding: 5px;
 		box-shadow: 0 0 50px;
-		background-color: black;
 	}
 	.list-menu{
 		height: auto;
