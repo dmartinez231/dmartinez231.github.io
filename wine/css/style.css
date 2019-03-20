@@ -105,9 +105,6 @@ h2{
 .background-video{
 	display: none;
 }
-.box-white{
-	display: none;
-}
 /*end style body home*/
 /*start navegador*/
 
@@ -288,17 +285,14 @@ h2{
 		min-height: 100%;
 		z-index: -1;
 	}
-	.box-white{
-		display: block;
-		background-color: transparent;
-		height: 55vh;
-	}
 	.container-header{
 		margin-top: 20px;
 		width: 100%;
 		text-align: center;
 		background-color: transparent;
 		border-radius: 0px;
+		position: relative;
+		height: 80vh;
 	}
 	.container-section{
 		display: flex;
@@ -340,6 +334,15 @@ h2{
 	}
 	#texto-wine{
 		color: black;
+		position: absolute;
+		top: 80%;
+		left: 0%;
+	}
+	.container-header .marca{
+		position: absolute;
+		transform: translate(-70%,-50%);
+		top: 70%;
+		left: 50%;
 	}
 	#como-trabajamos{
 		color: black;
