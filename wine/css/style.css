@@ -72,8 +72,7 @@ a:hover, label{
    justify-content: center;
 }
 .p-3{
-	background-color:#000000;
-	opacity: 0.6;
+	background-color: rgba(0,0,0,0.5);
 }
 footer {
 	color: #fff;
@@ -83,8 +82,16 @@ footer {
 .form {
   width: 450px;
 }
-
-
+.contenedor-input{
+	width: 87%;
+}
+.input-group-text{
+	width: 40px;
+}
+.small{
+	background-color: black;
+	border-radius: 5px;
+}
 /*END STYLES LOGIN*/
 
 /* Start style home*/
@@ -251,7 +258,10 @@ h2{
 /* End contenido footer*/
 /* Start media queries*/
 @media only screen and (min-width : 768px) and (max-width: 1223px) {
-
+	html{
+		position: relative;
+		min-height: 81.1%;
+	}
 	.container-section{
 		display: flex;
 		flex-wrap: wrap;
@@ -266,6 +276,18 @@ h2{
 	}
 	.contenedor-registros{
 		overflow: hidden;
+	}
+	.contenedor-input{
+		width: 90%;
+	}
+	footer{
+		background-color: rgba(0,0,0,0.7);
+		position: absolute;
+		top: 100%;
+		min-width: 96%;
+	}
+	footer .container{
+		min-width: 100%;
 	}
 }
 
@@ -354,14 +376,16 @@ h2{
 		color: black;
 	}
 	footer{
+		background-color: rgba(0,0,0,0.7);
 		position: absolute;
-		bottom: 0;
 		top: 100%;
 		min-width: 100%;
 	}
 	footer .container{
-		background-color: rgba(0, 0, 0, 0.5);
 		min-width: 100%;
+	}
+	.contenedor-input{
+		width: 90%;
 	}
 }
 	@media only screen and (min-width : 1824px) {
@@ -449,14 +473,16 @@ h2{
 			color: black;
 		}
 		footer{
+			background-color: rgba(0,0,0,0.7);
 			position: absolute;
-			bottom: 0;
 			top: 100%;
 			min-width: 100%;
 		}
 		footer .container{
-			background-color: rgba(0, 0, 0, 0.5);
 			min-width: 100%;
+		}
+		.contenedor-input{
+			width: 90%;
 		}
 }
 

@@ -1,0 +1,44 @@
+{
+    "usuarios": [
+        {
+            "id": 0,
+            "nombre": "david",
+            "apellido": "martinez",
+            "nacimiento": "1988-10-04",
+            "pais": "Chile",
+            "email": "davidm231@hotmail.com",
+            "password": "$2y$10$BVUY7ebRBmoTgpxk25CmGumHXtvXw\/GCQQHNkMTVsCCV5BIs49aHu",
+            "ofertas": "si"
+        },
+        {
+            "id": 1,
+            "nombre": "Carlox",
+            "apellido": "Zambrano",
+            "nacimiento": "2000-01-01",
+            "pais": "Colombia",
+            "email": "e@e.com",
+            "password": "$2y$10$2oT8OP6bbarHcuFerGBP..DgHeJPSesBFsQAkwYSs88zZOoaKgqka",
+            "ofertas": "si"
+        },
+        {
+            "id": 2,
+            "nombre": "Andres",
+            "apellido": "Gracia",
+            "nacimiento": "1978-02-09",
+            "pais": "bra",
+            "email": "a@a.com",
+            "password": "$2y$10$rZuo6zh59WXIK7vMNKwlr.hn2a4NzIAeZBt\/esSZ\/TslPOSB9FUfy",
+            "ofertas": "no"
+        },
+        {
+            "id": 3,
+            "nombre": "mario",
+            "apellido": "Garcia",
+            "nacimiento": "1990-06-13",
+            "pais": "arg",
+            "email": "m@m.com",
+            "password": "$2y$10$vzwtlBTM2LmzFh6OXPJPS.Lixrqu5ZAmmxLVRatsSG7.8eim3NOvy",
+            "ofertas": "no"
+        }
+    ]
+}
