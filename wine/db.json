@@ -1,0 +1,44 @@
+{
+    "usuarios": [
+        {
+            "id": 0,
+            "nombre": "david yancarlos",
+            "apellido": "martinez",
+            "nacimiento": "1988-10-04",
+            "pais": "arg",
+            "email": "davidm231@hotmail.com",
+            "password": "$2y$10$C9i.C85LYJeDeDNnnZ5yqOxvHI1essn1QNVOyMwWCzp13SqDVg8I.",
+            "ofertas": "no"
+        },
+        {
+            "id": "1",
+            "nombre": "david",
+            "apellido": "martinez",
+            "nacimiento": "1988-10-04",
+            "pais": "arg",
+            "email": "davidm231@hotmail.com",
+            "password": "$2y$10$cosft.Xmrw5DQz8GKI7PheGb1Dzj725bpBfQA03SrveRbxHMRs4ma",
+            "ofertas": "si"
+        },
+        {
+            "id": 2,
+            "nombre": "jelymar nose",
+            "apellido": "otro",
+            "nacimiento": "1990-01-01",
+            "pais": "ven",
+            "email": "gre@hotmail.com",
+            "password": "$2y$10$mTBIJonjK0dOZLO5dQ4tyeDgBPM8Ms8sXoC2e6EeQk3e8KcewSdou",
+            "ofertas": "no"
+        },
+        {
+            "id": 3,
+            "nombre": "lucia nose",
+            "apellido": "otro",
+            "nacimiento": "1990-01-01",
+            "pais": "arg",
+            "email": "dfh@ktyi.com",
+            "password": "$2y$10$EQJW.81WRw2m8n3COiATYug7j.dgJTUnbVVAGe5\/H.juLo2X\/rKYu",
+            "ofertas": "no"
+        }
+    ]
+}
