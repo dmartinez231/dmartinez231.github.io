@@ -8,7 +8,7 @@
   <div class="registros">
 	<section class="container">
 			<div class="center">
-				<form action="{{route('registro.guardar')}}" class="border p-3 form" method="post">
+				<form action="{{route('registro')}}" class="border p-3 form" method="post">
           @csrf
 					<h1 class="login">Registro</h1>
 					<div class="form-group text-center">
