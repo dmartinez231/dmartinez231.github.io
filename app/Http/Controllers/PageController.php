@@ -36,20 +36,4 @@ class PageController extends Controller
     {
       return view('compras');
     }
-    public function login()
-    {
-      return view('login');
-    }
-    public function registro()
-    {
-      $paisesRegistro = [
-      	"arg" =>"Argentina",
-      	"uru" =>"Uruguay",
-      	"bra" =>"Brasil",
-      	"chi" =>"Chile",
-      	"col" =>"Colombia",
-      	"ven" => "Venezuela"
-      ];
-      return view('registro')->with('paisesRegistro',$paisesRegistro);
-    }
 }

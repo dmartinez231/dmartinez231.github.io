@@ -32,7 +32,7 @@
           <a href="{{route('login')}}">Iniciar Sesion</a>
         </li>
         <li>
-          <a href="{{route('registro')}}">Registrarse</a>
+          <a href="{{route('register')}}">Registrarse</a>
         </li>
       </ul>
     </div>

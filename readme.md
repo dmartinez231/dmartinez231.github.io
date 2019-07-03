@@ -1,72 +1,89 @@
-<p align="center"><img src="https://laravel.com/assets/img/components/logo-laravel.svg"></p>
 
-<p align="center">
-<a href="https://travis-ci.org/laravel/framework"><img src="https://travis-ci.org/laravel/framework.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/d/total.svg" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/v/stable.svg" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/license.svg" alt="License"></a>
-</p>
+[![Latest Version on Packagist](https://img.shields.io/packagist/v/laraveles/spanish.svg?style=flat-square)](https://packagist.org/packages/laraveles/spanish)
+[![Total Downloads](https://img.shields.io/packagist/dt/laraveles/spanish.svg?style=flat-square)](https://packagist.org/packages/laraveles/spanish)
 
-## About Laravel
+# Laravel Español
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+Paquete de traducciones en español para Laravel 5. Este paquete te agrega a tu proyecto los ficheros de traducciones en español que Laravel 5 trae por defecto.
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+## Versiones
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+Para Laravel 5.8 utilizar la versión 1.2+, incluye la validación de contraseña hasta 8 caracteres. Para el resto de versiones utilizar 1.1+.
 
-## Learning Laravel
+Archivos por defecto incluidos en Laravel:
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+```
+es.json
+es/auth.php
+es/passwords.php
+es/pagination.php
+es/validation.php
+```
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 1400 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+- [Instalación](#instalar)
+- [Colaborar](#colaborar)
 
-## Laravel Sponsors
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](https://patreon.com/taylorotwell).
+<a name="instalar"></a>
+## Instalación
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Cubet Techno Labs](https://cubettech.com)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[British Software Development](https://www.britishsoftware.co)**
-- **[Webdock, Fast VPS Hosting](https://www.webdock.io/en)**
-- **[DevSquad](https://devsquad.com)**
-- [UserInsights](https://userinsights.com)
-- [Fragrantica](https://www.fragrantica.com)
-- [SOFTonSOFA](https://softonsofa.com/)
-- [User10](https://user10.com)
-- [Soumettre.fr](https://soumettre.fr/)
-- [CodeBrisk](https://codebrisk.com)
-- [1Forge](https://1forge.com)
-- [TECPRESSO](https://tecpresso.co.jp/)
-- [Runtime Converter](http://runtimeconverter.com/)
-- [WebL'Agence](https://weblagence.com/)
-- [Invoice Ninja](https://www.invoiceninja.com)
-- [iMi digital](https://www.imi-digital.de/)
-- [Earthlink](https://www.earthlink.ro/)
-- [Steadfast Collective](https://steadfastcollective.com/)
-- [We Are The Robots Inc.](https://watr.mx/)
-- [Understand.io](https://www.understand.io/)
-- [Abdel Elrafa](https://abdelelrafa.com)
-- [Hyper Host](https://hyper.host)
+Puedes instalar este paquete mediante composer:
 
-## Contributing
+```bash
+composer require laraveles/spanish
+```
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+En versiones anteriores a la 5.5 debes agregar el proveedor de servicios en tu fichero `config/app.php` (no es necesario en Laravel 5.5+ gracias al [sistema de autodiscovery](https://medium.com/@taylorotwell/package-auto-discovery-in-laravel-5-5-ea9e3ab20518)):
 
-## Security Vulnerabilities
+```php
+'providers' => [
+    // ...
+    Laraveles\Spanish\SpanishServiceProvider::class,
+];
+```
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+Ahora simplemente necesitamos necesitamos actualizar las traducciones que lo haremos con el siguiente comando:
 
-## License
+```bash
+php artisan vendor:publish --tag=lang
+```
 
-The Laravel framework is open-source software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+O también podramos usar:
+
+```bash
+php artisan laraveles:install-lang
+```
+
+
+Déspues de todos estos pasos, ya tenemos disponible nuestras traducciones en español, y solo necesitamos configurar Laravel para que use el idioma deseado.
+
+Esto lo podemos hacer modificando el parámetro `locale` de la configuración de Laravel en `config/app.php`:
+
+```
+// Ej: español
+'locale'          => 'es',
+// Ej: inglés
+'locale'          => 'en',
+```
+
+Se puede ser mas concreto e indicar las variaciones de un lenguaje:
+
+```
+// Inglés americano
+'locale' => 'en_US'
+// Portugués de Portugal
+'locale' => 'pt_PT'
+```
+
+Pero en este caso nos valdrá con un español internacional para todos.
+
+También se puede cambiar el idioma en tiempo de ejecución utilizando el método `setLocale` de `App`. Este cambio no es permanente, en la siguiente ejecución se utilizará el valor de configuración por defecto:
+
+```
+App::setLocale('es');
+```
+
+<a name="colaborar"></a>
+## Colaborar
+
+Mejoras y otras variaciones de paises de habla hispana son más que bienvenidas. Cualquier aportación vía Pull-Request ;D

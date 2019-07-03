@@ -11,11 +11,9 @@
 |
 */
 
-Route::get('/','PageController@home')->name('home');
+Route::get('/inicio','PageController@home')->name('home');
 Route::get('/productos','PageController@productos')->name('productos');
 Route::get('/compras', 'PageController@compras')->name('compras');
-Route::get('/login','PageController@login')->name('login');
-Route::get('/registro', 'PageController@registro')->name('registro');
 
 Auth::routes();
 
