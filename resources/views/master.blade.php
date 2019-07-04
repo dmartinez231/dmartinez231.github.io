@@ -10,9 +10,9 @@
 	<link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
 	<link rel="stylesheet" type="text/css" href="css/style.css">
 </head>
-<body id="body-home" class="login">
+<body id="body-home" class="login" @yield('background')>
 	@yield('video')
-  <nav class="container-navegador">
+  <nav @yield('style') class="container-navegador">
     <div id="logo">
       <h2 class="marca"><a href="{{route('home')}}">WINE</a></h2>
     </div>
@@ -38,7 +38,7 @@
     </div>
   </nav>
   @yield('section')
-  <footer>
+  <footer @yield('style')>
     <div class="container">
       <ul class="list-unstyled list-inline text-right">
         <li class="list-inline-item">Contactanos:</li>
