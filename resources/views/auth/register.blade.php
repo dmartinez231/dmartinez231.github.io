@@ -8,6 +8,7 @@
   <div class="registros">
 	<section class="container">
 			<div class="center">
+
 				<form  method="POST" action="{{ route('register') }}" class="border p-3 form">
           @csrf
 					<h1 class="login">Registro</h1>
@@ -120,7 +121,7 @@
 							<br>
 							<div class="form-row">
 								<div class="form-group col-md-6">
-										<input class="form-check-input" id="" type="radio" name="sale" value="{{ old('sale') }}" ><label class="form-check-label"> Sí</label>
+										<input class="form-check-input" id="" type="radio" name="sale" value="si" ><label class="form-check-label"> Sí</label>
                     @error('sale')
                       <span class="invalid-feedback" role="alert">
                         <strong>{{ $message }}</strong>
@@ -128,7 +129,7 @@
                     @enderror
 								</div>
 								<div class="form-group col-md-6">
-										<input  class="form-check-input" id="" type="radio" name="sale" value="{{ old('sale') }}" ><label class="form-check-label"> No</label>
+										<input  class="form-check-input" id="" type="radio" name="sale" value="no" ><label class="form-check-label"> No</label>
                     @error('sale')
                       <span class="invalid-feedback" role="alert">
                         <strong>{{ $message }}</strong>

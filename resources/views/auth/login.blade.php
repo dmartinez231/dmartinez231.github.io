@@ -7,11 +7,12 @@
 @section('section')
   <div class="container">
       <div class="center">
-        <form action="{{ route('login') }}" method="POST" class="border p-3 form">
+
+        <form action="{{ route('login') }}" method="post" class="border p-3 form">
         <h1 class="login">Login</h1>
         <hr>
         <div class="form-group text-center">
-          <a class="create" href="registro.php">Crear una Cuenta</a>
+          <a class="create" href="{{route('register')}}">Crear una Cuenta</a>
         </div>
           <div class="form-group">
             <div class="input-group mb-3">
@@ -69,6 +70,9 @@
               <button type="submit" class="btn btn-primary">Ingresar</button>
         </div>
         </form>
+        @php
+          dd($errors)
+        @endphp
     </div>
   </div>
 @endsection

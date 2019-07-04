@@ -11,10 +11,14 @@
 |
 */
 
-Route::get('/','PageController@home')->name('home');
-Route::get('/productos','PageController@productos')->name('productos');
-Route::get('/compras', 'PageController@compras')->name('compras');
+
 
 Auth::routes();
 
 Route::get('/home', 'HomeController@index');
+
+Route::get('/home','PageController@home')->name('home');
+Route::get('/productos','PageController@productos')->name('productos');
+Route::get('/compras', 'PageController@compras')->name('compras');
+route::get('/perfil', 'PageController@perfil')->name('perfil');
+route::get('/formularioP', 'PageController@index')->name('formularioProductos');

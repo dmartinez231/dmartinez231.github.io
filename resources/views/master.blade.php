@@ -22,18 +22,41 @@
         <a href="#" class="close"><span>Cerrar</span></a>
       </div>
       <ul class="list-menu">
-        <li>
-          <a href="{{route('productos')}}">Productos</a>
-        </li>
-        <li>
-          <a href="{{route('compras')}}">Compras</a>
-        </li>
-        <li>
-          <a href="{{route('login')}}">Iniciar Sesion</a>
-        </li>
-        <li>
-          <a href="{{route('register')}}">Registrarse</a>
-        </li>
+				@guest
+					<li>
+						<a href="{{route('productos')}}">Productos</a>
+					</li>
+					<li>
+						<a href="{{route('compras')}}">Compras</a>
+					</li>
+					<li>
+						<a href="{{route('login')}}">Iniciar Sesion</a>
+					</li>
+					<li>
+						<a href="{{route('register')}}">Registrarse</a>
+					</li>
+					@else
+						<li>
+							<a href="{{route('productos')}}">Productos</a>
+						</li>
+						<li>
+							<a href="{{route('compras')}}">Compras</a>
+						</li>
+						<li>
+							<a href="{{route('perfil')}}">Bienvenido {{Auth::user()->name}}</a>
+						</li>
+						<li>
+							<a href="{{ route('logout') }}"
+								 onclick="event.preventDefault();
+															 document.getElementById('logout-form').submit();">
+									Cerrar Sesion
+							</a>
+
+							<form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+									@csrf
+							</form>
+						</li>
+				@endguest
       </ul>
     </div>
   </nav>

@@ -36,4 +36,9 @@ class PageController extends Controller
     {
       return view('compras');
     }
+
+    public function index()
+    {
+      return view('formulario');
+    }
 }
