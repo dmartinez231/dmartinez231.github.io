@@ -15,5 +15,5 @@ style ="background:none"
 
 
 @section('section')
-
+@yield('section')
 @endsection

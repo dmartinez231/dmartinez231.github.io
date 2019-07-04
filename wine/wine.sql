@@ -1,15 +1,15 @@
-CREATE DATABASE  IF NOT EXISTS `wine` /*!40100 DEFAULT CHARACTER SET utf8 */;
+CREATE DATABASE  IF NOT EXISTS `wine` /*!40100 DEFAULT CHARACTER SET latin1 */;
 USE `wine`;
--- MySQL dump 10.13  Distrib 8.0.16, for macos10.14 (x86_64)
+-- MySQL dump 10.13  Distrib 5.7.26, for Linux (x86_64)
 --
--- Host: localhost    Database: WINE
+-- Host: localhost    Database: wine
 -- ------------------------------------------------------
--- Server version	5.7.25
+-- Server version	5.7.26-0ubuntu0.18.10.1
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
 /*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
- SET NAMES utf8 ;
+/*!40101 SET NAMES utf8 */;
 /*!40103 SET @OLD_TIME_ZONE=@@TIME_ZONE */;
 /*!40103 SET TIME_ZONE='+00:00' */;
 /*!40014 SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0 */;
@@ -23,7 +23,7 @@ USE `wine`;
 
 DROP TABLE IF EXISTS `cart`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
- SET character_set_client = utf8mb4 ;
+/*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `cart` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `amount` int(11) NOT NULL,
@@ -59,7 +59,7 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `cepa`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
- SET character_set_client = utf8mb4 ;
+/*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `cepa` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `description` varchar(255) NOT NULL,
@@ -82,7 +82,7 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `method_pay`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
- SET character_set_client = utf8mb4 ;
+/*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `method_pay` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `description` varchar(255) DEFAULT NULL,
@@ -105,7 +105,7 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `product`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
- SET character_set_client = utf8mb4 ;
+/*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `product` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `name` varchar(100) NOT NULL,
@@ -138,7 +138,7 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `product_cart`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
- SET character_set_client = utf8mb4 ;
+/*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `product_cart` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `cartID` int(11) NOT NULL,
@@ -166,7 +166,7 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `status_buy`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
- SET character_set_client = utf8mb4 ;
+/*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `status_buy` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `description` varchar(255) DEFAULT NULL,
@@ -189,7 +189,7 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `type`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
- SET character_set_client = utf8mb4 ;
+/*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `type` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `description` varchar(255) NOT NULL,
@@ -212,7 +212,7 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `user`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
- SET character_set_client = utf8mb4 ;
+/*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `user` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `name` varchar(100) NOT NULL,
@@ -245,4 +245,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2019-06-04 15:02:00
+-- Dump completed on 2019-07-04 11:05:12
