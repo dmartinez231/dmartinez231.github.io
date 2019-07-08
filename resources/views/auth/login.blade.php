@@ -9,6 +9,7 @@
       <div class="center">
 
         <form action="{{ route('login') }}" method="post" class="border p-3 form">
+          @csrf
         <h1 class="login">Login</h1>
         <hr>
         <div class="form-group text-center">
@@ -70,9 +71,6 @@
               <button type="submit" class="btn btn-primary">Ingresar</button>
         </div>
         </form>
-        @php
-          dd($errors)
-        @endphp
     </div>
   </div>
 @endsection
