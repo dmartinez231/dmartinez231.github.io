@@ -11,21 +11,19 @@
 |
 */
 
-<<<<<<< HEAD:routes/web.php
 
-=======
-Route::get('/','PageController@home')->name('home');
-Route::get('/productos','PageController@productos')->name('productos');
-Route::get('/compras', 'PageController@compras')->name('compras');
-Route::get('/compras', 'PageController@compras')->name('compras');
->>>>>>> 25b26c6d922a5d6820226e5fb6907374e1d51bfa:resources/routes/web.php
 
-Auth::routes();
+Route::get('/f', function () {
+    return 'Hello World';
+});
 
 Route::get('/home', 'HomeController@index');
 
 Route::get('/home','PageController@home')->name('home');
 Route::get('/productos','PageController@productos')->name('productos');
 Route::get('/compras', 'PageController@compras')->name('compras');
-route::get('/perfil', 'PageController@perfil')->name('perfil');
-route::get('/formularioP', 'PageController@index')->name('formularioProductos');
+Route::get('/perfil', 'PageController@perfil')->name('perfil'); // nombre del usuario
+
+//Route::get('/formulario', 'PageController@formulario')->name('formulario');
+
+Auth::routes();

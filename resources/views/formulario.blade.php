@@ -1,7 +1,7 @@
 @extends('master')
 
 @section('title')
-  <title>Productos</title>
+  <title>Formulario</title>
 @endsection
 
 @section('style')
@@ -15,9 +15,5 @@ style ="background:none"
 
 
 @section('section')
-  <form class="" action="index.html" method="post">
-    <input type="text" name="nombre" value="">
-
-    <button type="submit" name="">enviar</button>
-  </form>
+@yield('section')
 @endsection
