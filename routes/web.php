@@ -18,6 +18,7 @@ Route::get('/','PageController@home')->name('home');
 Route::get('/productos','PageController@productos')->name('productos');
 Route::get('/compras', 'PageController@compras')->name('compras');
 Route::get('/perfil', 'PageController@perfil')->name('perfil');
-
+Route::get('/formulario', 'FormularioController@index')->name('formulario');
+Route::post('/formulario', 'FormularioController@formulario')->name('formulario');
 Auth::routes();
 Route::get('/home', 'HomeController@index');
