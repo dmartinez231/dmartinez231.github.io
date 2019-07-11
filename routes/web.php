@@ -19,12 +19,9 @@ Route::get('/','PageController@home')->name('home');
 Route::get('/productos','PageController@productos')->name('productos');
 Route::get('/compras', 'PageController@compras')->name('compras');
 Route::get('/perfil', 'PageController@perfil')->name('perfil');
-<<<<<<< HEAD
 Route::get('/formulario', 'FormularioController@index')->name('formulario');
 Route::post('/formulario', 'FormularioController@formulario')->name('formulario');
-=======
 Route::post('/perfil','PageController@actualizarPerfil')->name('actualizarPerfil');
 
->>>>>>> 2c4eb0e0ee8a696621d5662a96d54590aece7b3d
 Auth::routes();
 Route::get('/home', 'HomeController@index');
