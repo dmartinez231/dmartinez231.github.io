@@ -8,7 +8,7 @@
   <div class="registros">
   <section class="container">
       <div class="center">
-        <form action="perfil.php" class="border p-3 form" method="post">
+        <form action="{{route ('perfil')}}" class="border p-3 form" method="post">
           {{ csrf_field() }}
           <h1 class="login">Perfil</h1>
           <div class="form-group text-center">
