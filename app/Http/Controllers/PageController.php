@@ -40,4 +40,9 @@ class PageController extends Controller
     {
       return view('formulario');
     }
+
+    public function perfil()
+    {
+      return view('perfil');
+    }
 }

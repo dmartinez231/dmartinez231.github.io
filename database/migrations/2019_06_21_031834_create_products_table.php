@@ -17,7 +17,7 @@ class CreateProductsTable extends Migration
             $table->bigIncrements('id');
             $table->string('name');
             $table->string  ('description');
-            $table->interger('stock');
+            $table->bigInteger('stock');
             $table->date('year');
             $table->double('price');
             $table->string('photo');

@@ -9,6 +9,11 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
+Route::get('/install', function(){
+  Artisan::call('storage:link');
+  Artisan::call('migrate');
+  Artisan::call('db:seed');
+});
 Route::get('/','PageController@home')->name('home');
 Route::get('/productos','PageController@productos')->name('productos');
 Route::get('/compras', 'PageController@compras')->name('compras');
