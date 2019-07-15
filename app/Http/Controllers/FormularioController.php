@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Product;
 
 class FormularioController extends Controller
 {
@@ -23,7 +24,8 @@ class FormularioController extends Controller
      */
     public function create()
     {
-        //
+
+
     }
 
     /**
@@ -34,7 +36,16 @@ class FormularioController extends Controller
      */
     public function store(Request $request)
     {
-        //
+      $new_product = new Product();
+      $new_product->name = $request->input('name');
+      $new_product->description = $request->input('description');
+      $new_product->stock = $request->input('stock');
+      $new_product->year = $request->input('year');
+      $new_product->photo = $request->input('photo');
+
+      $new_product->save();
+
+      return 'Producto Creado con éxito';
     }
 
     /**

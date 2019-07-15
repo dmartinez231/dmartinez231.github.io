@@ -20,7 +20,7 @@ Route::get('/productos','PageController@productos')->name('productos');
 Route::get('/compras', 'PageController@compras')->name('compras');
 Route::get('/perfil', 'PageController@perfil')->name('perfil');
 Route::get('/formulario', 'FormularioController@index')->name('formulario');
-Route::post('/formulario', 'FormularioController@formulario')->name('formulario');
+Route::post('/formulario', 'FormularioController@store')->name('formulario');
 Route::post('/perfil','PageController@actualizarPerfil')->name('actualizarPerfil');
 
 Auth::routes();
