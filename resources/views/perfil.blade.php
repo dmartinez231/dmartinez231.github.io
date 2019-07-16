@@ -3,6 +3,9 @@
 @section('title')
   <title>Perfil</title>
 @endsection
+@section('script')
+  <script scr="/js/validar.js"></script>
+@endsection
 @section('section')
 
   <div class="registros">
@@ -69,15 +72,13 @@
                         @if (Auth::user()->country == "chi")
                           <option value="chi" selected>Chile</option>
                         @endif
-                        @if (Auth::user()->country == "arg")
-                          <option value="arg" selected>Argentina</option>
-                        @endif
-
-
-
+                        @if (Auth::user()->country == "col")
                           <option value="col">Colombia</option>
+                        @endif
+                        @if (Auth::user()->country == "col")
                           <option value="ven">Venezuela</option>
-                        </select>
+                        @endif
+                      </select>
                       @else
                       <select class="form-control" id="pais" class="" name="country">
                         <option value="arg">Argentina</option>

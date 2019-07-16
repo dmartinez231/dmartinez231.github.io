@@ -9,6 +9,7 @@
 	<link href="https://fonts.googleapis.com/css?family=Bad+Script" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
 	<link rel="stylesheet" type="text/css" href="css/style.css">
+	@yield('script')
 </head>
 <body id="body-home" class="login" @yield('background')>
 	@yield('video')

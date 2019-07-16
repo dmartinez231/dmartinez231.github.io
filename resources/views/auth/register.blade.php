@@ -4,12 +4,15 @@
   <title>Registrarse</title>
 @endsection
 
+@section('script')
+  <script src="js/validar.js"></script>
+@endsection
 @section('section')
   <div class="registros">
 	<section class="container">
 			<div class="center">
 
-				<form  method="POST" action="{{ route('register') }}" class="border p-3 form">
+				<form  method="POST" action="{{ route('register') }}" class="border p-3 form" ">
           @csrf
 					<h1 class="login">Registro</h1>
 					<div class="form-group text-center">
@@ -19,7 +22,7 @@
 								<div class="input-group mb-3">
 									<div class="input-group-prepend">
 										<label  class="form-check-label" for="nombre">Nombre:</label>
-										<input class="form-control @error('name') is-invalid @enderror"  id="nombre" type="text" name="name" value="{{ old('name') }}"  required autocomplete="name" autofocus>
+										<input class="form-control @error('name') is-invalid @enderror"  id="nombre" type="text" name="name" value="{{ old('name') }}"  autocomplete="name" autofocus>
                       @error('name')
                         <span class="invalid-feedback" role="alert">
                           <strong>{{ $message }}</strong>
@@ -32,7 +35,7 @@
 								<div class="input-group mb-3">
 									<div class="input-group-prepend">
 										<label  class="form-check-label" for="nombre">Apellido:</label>
-										<input class="form-control @error('last_name') is-invalid @enderror" id="apellido" type="text" name="last_name" value="{{ old('last_name') }}" required autocomplete="last_name" autofocus>
+										<input class="form-control @error('last_name') is-invalid @enderror" id="apellido" type="text" name="last_name" value="{{ old('last_name') }}" autocomplete="last_name" autofocus>
                     @error('last_name')
                       <span class="invalid-feedback" role="alert">
                         <strong>{{ $message }}</strong>
@@ -47,7 +50,7 @@
 								<div class="input-group mb-3">
 									<div class="input-group-prepend">
 										<label class="form-check-label" for="nacimiento">Fecha de nacimiento:</label>
-										<input class="form-control @error('birthday') is-invalid @enderror" type="date" name="birthday" value="{{ old('birthday') }}">
+										<input class="form-control  @error('birthday') is-invalid @enderror" id="edad" type="date" name="birthday" value="{{ old('birthday') }}">
                     @error('birthday')
                       <span class="invalid-feedback" role="alert">
                         <strong>{{ $message }}</strong>
@@ -92,8 +95,8 @@
 								<div class="input-group mb-3">
 									<div class="input-group-prepend">
 										<label class="form-check-label" for="pass">Contraseña:</label >
-										<input class="form-control @error('password') is-invalid @enderror" id="pass" type="password" name="password" value=""
-                      required autocomplete="new-password">
+										<input class="form-control @error('password') is-invalid @enderror" id="password" type="password" name="password" value=""
+                       autocomplete="new-password">
                     @error('password')
                         <span class="invalid-feedback" role="alert">
                           <strong>{{ $message }}</strong>
@@ -106,7 +109,7 @@
 								<div class="input-group mb-3">
 									<div class="input-group-prepend">
 										<label class="form-check-label" for="confirmpass">Confirmar contraseña:</label>
-										<input class="form-control" id="confirmpass" type="password" name="password_confirmation" required autocomplete="new-password" value="">
+										<input class="form-control" id="confirmpass" type="password" name="password_confirmation"  autocomplete="new-password" value="">
                     @error('password')
                       <span class="invalid-feedback" role="alert">
                         <strong>{{ $message }}</strong>
@@ -121,7 +124,7 @@
 							<br>
 							<div class="form-row">
 								<div class="form-group col-md-6">
-										<input class="form-check-input" id="" type="radio" name="sale" value="si" ><label class="form-check-label"> Sí</label>
+										<input class="form-check-input" id="saleSi" type="radio" name="sale" value="si" ><label class="form-check-label"> Sí</label>
                     @error('sale')
                       <span class="invalid-feedback" role="alert">
                         <strong>{{ $message }}</strong>
@@ -129,7 +132,7 @@
                     @enderror
 								</div>
 								<div class="form-group col-md-6">
-										<input  class="form-check-input" id="" type="radio" name="sale" value="no" ><label class="form-check-label"> No</label>
+										<input  class="form-check-input" id="saleNo" type="radio" name="sale" value="no" ><label class="form-check-label"> No</label>
                     @error('sale')
                       <span class="invalid-feedback" role="alert">
                         <strong>{{ $message }}</strong>

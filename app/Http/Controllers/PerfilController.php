@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use User;
 
 class PerfilController extends Controller
 {
@@ -13,7 +14,7 @@ class PerfilController extends Controller
      */
     public function index()
     {
-        //
+      return view('perfil');
     }
 
     /**
@@ -68,7 +69,7 @@ class PerfilController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+      
     }
 
     /**
