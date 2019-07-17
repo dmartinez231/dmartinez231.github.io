@@ -71,9 +71,6 @@ window.addEventListener("load", function() {
     if (birthday.value == "") {
       alert("La edad es obligatoria");
       event.preventDefault();
-    }else if (!edad(birthday.value)){
-      alert("Tiene que ser mayor de 18 años");
-      event.preventDefault();
     }
 
   });

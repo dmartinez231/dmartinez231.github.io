@@ -11,7 +11,7 @@
   <div class="registros">
   <section class="container">
       <div class="center">
-        <form action="{{route ('perfil')}}" class="border p-3 form" method="post">
+        <form action="{{route ('actualizarPerfil')}}" class="border p-3 form" method="post">
           {{ csrf_field() }}
           <h1 class="login">Perfil</h1>
           <div class="form-group text-center">
@@ -21,22 +21,26 @@
                 <div class="input-group mb-3">
                   <div class="input-group-prepend">
                     <label  class="form-check-label" for="nombre">Nombre:</label>
-                    <input class="form-control" id="nombre" type="text" name="name" value="{{Auth::user()->name}}">
+                    <input class="form-control @error('name') is-invalid @enderror" id="nombre" type="text" name="name" value="{{Auth::user()->name}}">
+                      @error('name')
+                        <span class="invalid-feedback" role="alert">
+                          <strong>{{ $message }}</strong>
+                        </span>
+                      @enderror
                   </div>
-                  <?php if (isset($errores["nombre"])): ?>
-                    <p class="small text-danger"><?= $errores["nombre"]?> </p>
-                  <?php endif; ?>
                 </div>
               </div>
               <div class="form-group col-md-6">
                 <div class="input-group mb-3">
                   <div class="input-group-prepend">
                     <label  class="form-check-label" for="nombre">Apellido:</label>
-                    <input class="form-control" id="apellido" type="text" name="last_name" value="{{Auth::user()->last_name}}">
+                    <input class="form-control @error('last_name') is-invalid @enderror" id="apellido" type="text" name="last_name" value="{{Auth::user()->last_name}}">
+                      @error('last_name')
+                        <span class="invalid-feedback" role="alert">
+                          <strong>{{ $message }}</strong>
+                        </span>
+                      @enderror
                   </div>
-                  <?php if (isset($errores["apellido"])): ?>
-                    <p class="small text-danger"><?= $errores["apellido"]?> </p>
-                  <?php endif; ?>
                 </div>
               </div>
             </div>
@@ -45,11 +49,13 @@
                 <div class="input-group mb-3">
                   <div class="input-group-prepend">
                     <label class="form-check-label" for="nacimiento">Fecha de nacimiento:</label>
-                    <input class="form-control" type="date" name="birthday" value="{{Auth::user()->birthday}}" readonly="readonly">
+                    <input class="form-control  @error('birthday') is-invalid @enderror" type="date" name="birthday" value="{{Auth::user()->birthday}}" readonly="readonly">
+                      @error('birthday')
+                        <span class="invalid-feedback" role="alert">
+                          <strong>{{ $message }}</strong>
+                        </span>
+                      @enderror
                   </div >
-                  <?php if (isset($errores["nacimiento"])): ?>
-                    <p class="small text-danger"><?= $errores["nacimiento"]?> </p>
-                  <?php endif; ?>
                 </div>
               </div>
             </div>
@@ -59,7 +65,7 @@
                     <div class="input-group-prepend">
                       <label class="form-check-label" for="pais">País:</label>
                       @if (isset(Auth::user()->country))
-                        <select class="form-control" id="pais" class="" name="country">
+                        <select class="form-control" id="pais" class="" name="country" disabled>
                           @if (Auth::user()->country == "arg")
                           <option value="arg" selected>Argentina</option>
                         @endif
@@ -73,20 +79,11 @@
                           <option value="chi" selected>Chile</option>
                         @endif
                         @if (Auth::user()->country == "col")
-                          <option value="col">Colombia</option>
+                          <option value="col" selected>Colombia</option>
                         @endif
-                        @if (Auth::user()->country == "col")
-                          <option value="ven">Venezuela</option>
+                        @if (Auth::user()->country == "ven")
+                          <option value="ven" selected>Venezuela</option>
                         @endif
-                      </select>
-                      @else
-                      <select class="form-control" id="pais" class="" name="country">
-                        <option value="arg">Argentina</option>
-                        <option value="uru">Uruguay</option>
-                        <option value="bra">Brasil</option>
-                        <option value="chi">Chile</option>
-                        <option value="col">Colombia</option>
-                        <option value="ven">Venezuela</option>
                       </select>
                     @endif
                   </div>
@@ -96,11 +93,13 @@
                 <div class="input-group mb-3">
                   <div class="input-group-prepend">
                     <label class="form-check-label" for="mail">E-mail:</label>
-                    <input class="form-control" id="mail" type="email" name="email" value="{{Auth::user()->email}}" readonly="readonly">
+                    <input class="form-control  @error('email') is-invalid @enderror" id="mail" type="email" name="email" value="{{Auth::user()->email}}" readonly="readonly">
+                      @error('email')
+                        <span class="invalid-feedback" role="alert">
+                          <strong>{{ $message }}</strong>
+                        </span>
+                      @enderror
                   </div>
-                  <?php if (isset($errores["email"])): ?>
-                    <p class="small text-danger"><?= $errores["email"]?> </p>
-                  <?php endif; ?>
                 </div>
               </div>
             </div>
@@ -109,22 +108,26 @@
                 <div class="input-group mb-3">
                   <div class="input-group-prepend">
                     <label class="form-check-label" for="pass">Nueva Contraseña:</label >
-                    <input class="form-control" id="pass" type="password" name="password" value="">
+                    <input class="form-control @error('password') is-invalid @enderror" id="pass" type="password" name="password" value="">
+                      @error('password')
+                          <span class="invalid-feedback" role="alert">
+                            <strong>{{ $message }}</strong>
+                          </span>
+                      @enderror
                   </div>
-                  <?php if (isset($errores["pass"])): ?>
-                    <p class="small text-danger"><?= $errores["pass"]?> </p>
-                  <?php endif; ?>
                 </div>
               </div>
               <div class="form-group col-md-6">
                 <div class="input-group mb-3">
                   <div class="input-group-prepend">
                     <label class="form-check-label" for="confirmpass">Confirmar contraseña:</label>
-                    <input class="form-control" id="confirmpass" type="password" name="confirmpass" value="">
+                    <input class="form-control @error('password') is-invalid @enderror" id="confirmpass" type="password" name="confirmpass" value="">
+                      @error('password')
+                          <span class="invalid-feedback" role="alert">
+                            <strong>{{ $message }}</strong>
+                          </span>
+                      @enderror
                   </div>
-                  <?php if (isset($errores["pass"])): ?>
-                    <p class="small text-danger"><?= $errores["pass"]?> </p>
-                  <?php endif; ?>
                 </div>
               </div>
             </div>
@@ -133,22 +136,22 @@
               <br>
               <div class="form-row">
                 <div class="form-group col-md-6">
-                    <input class="form-check-input" id="" type="radio" name="sale" value="si">
+                    <input class="form-check-input" id="" type="radio" name="sale" value="si" @if (Auth::user()->sale == "si") checked @endif>
                     <label class="form-check-label"> Sí</label>
-                    <?php if (isset($errores["ofertas"])): ?>
-                      <div class="input-group mb-3">
-                        <p class="small text-danger"><?= $errores["ofertas"]?> </p>
-                      </div>
-                    <?php endif; ?>
+                    @error('sale')
+                      <span class="invalid-feedback" role="alert">
+                        <strong>{{ $message }}</strong>
+                      </span>
+                    @enderror
                 </div>
                 <div class="form-group col-md-6">
-                    <input  class="form-check-input" id="" type="radio" name="sale" value="no">
+                    <input  class="form-check-input" id="" type="radio" name="sale" value="no" @if (Auth::user()->sale == "no") checked @endif>
                     <label class="form-check-label"> No</label>
-                    <?php if (isset($errores["ofertas"])): ?>
-                      <div class="input-group mb-3">
-                        <p class="small text-danger"><?= $errores["ofertas"]?> </p>
-                      </div>
-                    <?php endif; ?>
+                    @error('sale')
+                      <span class="invalid-feedback" role="alert">
+                        <strong>{{ $message }}</strong>
+                      </span>
+                    @enderror
                 </div>
 
               </div>

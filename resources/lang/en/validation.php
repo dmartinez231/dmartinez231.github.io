@@ -12,7 +12,8 @@ return [
     | as the size rules. Feel free to tweak each of these messages here.
     |
     */
-
+    'formato_string' => 'El campo solo puede tener 2 nombres o 2 apellidos',
+    'edad' => 'Usted es menor de edad.',
     'accepted' => 'The :attribute must be accepted.',
     'active_url' => 'The :attribute is not a valid URL.',
     'after' => 'The :attribute must be a date after :date.',

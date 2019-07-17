@@ -48,21 +48,31 @@ class RegisterController extends Controller
      */
     protected function validator(array $data)
     {
+      if(!isset($data['sale'])){
+        $data['sale'] = null;
+      };
         $validations = [
-            'name' => ['required', 'string','min:3', 'max:255'],
-            'last_name' => ['required', 'string','min:3', 'max:255'],
-            'birthday' => ['required', 'string'],
+            'name' => ['required','formato_string','regex_personalizado','min:3', 'max:255'],
+            'last_name' => ['required','formato_string','regex_personalizado','min:3', 'max:255'],
+            'birthday' => ['required', 'string','edad_formato','edad'],
             'country' => ['required', 'string', 'max:255'],
             'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
-            'password' => ['required', 'string', 'min:8', 'confirmed'],
+            'password' => ['required', 'string','pass_personalizada','pass_mezcla','min:8', 'confirmed'],
             'sale' => ['required', 'string', 'min:2']
           ];
         $messages = [
-          'required' => ':attribute es obligatorio.',
-          'min' => ':attribute de tener al menos :min caracteres.',
-          'max' => ':attribute no debe superar los :max caracteres',
-          'confirmed' => 'Las claves no coinciden.'
-        ];
+          'required' => 'El campo es obligatorio.',
+          'regex' =>'El campo tiene caracteres invalidos',
+          'min' => 'El campo debe tener al menos :min caracteres.',
+          'max' => 'El campo no debe superar los :max caracteres',
+          'confirmed' => 'Las claves no coinciden.',
+          'edad' => 'Usted es menor de edad.',
+          'formato_string' =>'El campo solo puede tener 2 nombres o 2 apellidos',
+          'regex_personalizado' =>'El campo tiene caracteres invalidos',
+          'pass_personalizada' => 'La contraseña debe incluir al menos un numero',
+          'pass_mezcla' => 'La contraseña debe incluir al menos una mayuscula, una minuscula y un numero',
+          'edad_formato' =>'La edad no tiene un formato correcto aaaa-mm-dd'
+          ];
 
         return Validator::make($data, $validations, $messages);
     }
