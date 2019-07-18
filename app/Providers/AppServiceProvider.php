@@ -26,7 +26,22 @@ class AppServiceProvider extends ServiceProvider
     public function boot()
     {
       Schema::defaultStringLength(191);
+      Validator::extend('edad_formato',function($attribute,$value,$parameters){
+        if(preg_match('/([12]\d{3}-(0[1-9]|1[0-2])-(0[1-9]|[12]\d|3[01]))/',$value) == 0){
+          return false;
+        }
+        dd($value);
+        list($año,$mes,$dia) = explode('-',$value);
+        //PREGUNTA SI ESTA VACIO Y SI ES NUMERICO
+        if (empty($año) || empty($mes) || empty($dia) && !is_numeric($año) || !is_numeric($mes) || !is_numeric($dia)) {
+          return false;
+        }
+        return true;
+      });
       Validator::extend('edad',function($attribute,$value,$parameters){
+        if(preg_match('/([12]\d{3}-(0[1-9]|1[0-2])-(0[1-9]|[12]\d|3[01]))/',$value) == 0){
+          return false;
+        }
         $añoActual = date("Y");
         $mesActual = date("m");
         $diaActual = date("d");
@@ -47,13 +62,21 @@ class AppServiceProvider extends ServiceProvider
         }
         return true;
       });
-      Validator::extend('formato_string',function($attribute,$value,$parameters){
+      Validator::extend('formato_nombre',function($attribute,$value,$parameters){
         $palabras = str_word_count($value);
         if ($palabras <= 2) {
           return true;
         }
         return false;
       });
+      Validator::extend('formato_apellido',function($attribute,$value,$parameters){
+        $palabras = str_word_count($value);
+        if ($palabras <= 2) {
+          return true;
+        }
+        return false;
+      });
+
       Validator::extend('regex_personalizado',function($attribute,$value,$parameters){
         $permitidos = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ áéíóúÁÉÍÓÚñÑ'";
          for ($i=0; $i<strlen($value); $i++){
@@ -91,13 +114,8 @@ class AppServiceProvider extends ServiceProvider
         }
         return true;
       });
-      Validator::extend('edad_formato',function($attribute,$value,$parameters){
-        if(!preg_match('/([12]\d{3}-(0[1-9]|1[0-2])-(0[1-9]|[12]\d|3[01]))/',$value)){
-          return false;
-        }
-        list($año,$mes,$dia) = explode('-',$value);
-        //PREGUNTA SI ESTA VACIO Y SI ES NUMERICO
-        if (empty($año) || empty($mes) || empty($dia) && !is_numeric($año) || !is_numeric($mes) || !is_numeric($dia)) {
+      Validator::extend('pais',function($attribute,$value,$parameters){
+        if ($value == "nada"){
           return false;
         }
         return true;

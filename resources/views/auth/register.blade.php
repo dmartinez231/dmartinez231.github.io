@@ -18,7 +18,7 @@
 							<div class="form-group col-md-6">
 								<div class="input-group mb-3">
 									<div class="input-group-prepend">
-										<label  class="form-check-label" for="nombre">Nombre:</label>
+										<label  class="form-check-label" for="nombre">Nombres:</label>
 										<input class="form-control @error('name') is-invalid @enderror"  id="nombre" type="text" name="name" value="{{ old('name') }}"  autocomplete="name" autofocus>
                       @error('name')
                         <span class="invalid-feedback" role="alert">
@@ -31,7 +31,7 @@
               <div class="form-group col-md-6">
 								<div class="input-group mb-3">
 									<div class="input-group-prepend">
-										<label  class="form-check-label" for="nombre">Apellido:</label>
+										<label  class="form-check-label" for="nombre">Apellidos:</label>
 										<input class="form-control @error('last_name') is-invalid @enderror" id="apellido" type="text" name="last_name" value="{{ old('last_name') }}" autocomplete="last_name" autofocus>
                     @error('last_name')
                       <span class="invalid-feedback" role="alert">
@@ -62,7 +62,8 @@
 						 	    <div class="input-group mb-3">
 						 	    	<div class="input-group-prepend">
 						 	    		<label class="form-check-label" for="pais">País:</label>
-										<select class="form-control" id="pais" class="" name="country">
+										<select class="form-control form-control @error('country') is-invalid @enderror" id="pais" class="" name="country">
+                      <option value="nada">Un pais</option>
 										  <option value="arg">Argentina</option>
                       <option value="uru">Uruguay</option>
                       <option value="bra">Brasil</option>
@@ -70,6 +71,11 @@
                       <option value="col">Colombia</option>
                       <option value="ven">Venezuela</option>
 										</select>
+                    @error('email')
+                      <span class="invalid-feedback" role="alert">
+                        <strong>{{ $message }}</strong>
+                      </span>
+                    @enderror
 									</div>
 								</div>
 							</div>
