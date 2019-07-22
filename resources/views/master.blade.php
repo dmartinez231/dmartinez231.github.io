@@ -44,7 +44,7 @@
 							<a href="{{route('compras')}}">Compras</a>
 						</li>
 						<li>
-							<a href="{{route('perfil')}}">Bienvenido {{Auth::user()->name}}</a>
+							<a href="{{route('perfil')}}" style="color:red">Bienvenido {{Auth::user()->name}}</a>
 						</li>
 						<li>
 							<a href="{{ route('logout') }}"

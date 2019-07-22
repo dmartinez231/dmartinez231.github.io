@@ -11,7 +11,12 @@
   <div class="registros">
   <section class="container">
       <div class="center">
-        <form action="{{route ('actualizarPerfil')}}" class="border p-3 form" method="post">
+        <form action="{{route('actualizarPerfil',$user->id)}}" class="border p-3 form" method="post">
+          @if (session()->has('msj'))
+            <div class="alert alert-success" role="alert">
+              {{session('msj')}}
+            </div>
+          @endif
           {{ csrf_field() }}
           <h1 class="login">Perfil</h1>
           <div class="form-group text-center">
@@ -21,7 +26,7 @@
                 <div class="input-group mb-3">
                   <div class="input-group-prepend">
                     <label  class="form-check-label" for="nombre">Nombre:</label>
-                    <input class="form-control @error('name') is-invalid @enderror" id="nombre" type="text" name="name" value="{{Auth::user()->name}}">
+                    <input class="form-control @error('name') is-invalid @enderror" id="nombre" type="text" name="name" value="{{$user->name}}">
                       @error('name')
                         <span class="invalid-feedback" role="alert">
                           <strong>{{ $message }}</strong>
@@ -34,7 +39,7 @@
                 <div class="input-group mb-3">
                   <div class="input-group-prepend">
                     <label  class="form-check-label" for="nombre">Apellido:</label>
-                    <input class="form-control @error('last_name') is-invalid @enderror" id="apellido" type="text" name="last_name" value="{{Auth::user()->last_name}}">
+                    <input class="form-control @error('last_name') is-invalid @enderror" id="apellido" type="text" name="last_name" value="{{$user->last_name}}">
                       @error('last_name')
                         <span class="invalid-feedback" role="alert">
                           <strong>{{ $message }}</strong>
@@ -49,7 +54,7 @@
                 <div class="input-group mb-3">
                   <div class="input-group-prepend">
                     <label class="form-check-label" for="nacimiento">Fecha de nacimiento:</label>
-                    <input class="form-control  @error('birthday') is-invalid @enderror" type="date" name="birthday" value="{{Auth::user()->birthday}}" readonly="readonly">
+                    <input class="form-control  @error('birthday') is-invalid @enderror" type="date" name="birthday" value="{{$user->birthday}}" readonly="readonly">
                       @error('birthday')
                         <span class="invalid-feedback" role="alert">
                           <strong>{{ $message }}</strong>
@@ -64,24 +69,24 @@
                   <div class="input-group mb-3">
                     <div class="input-group-prepend">
                       <label class="form-check-label" for="pais">País:</label>
-                      @if (isset(Auth::user()->country))
+                      @if (isset($user->country))
                         <select class="form-control" id="pais" class="" name="country" disabled>
-                          @if (Auth::user()->country == "arg")
+                          @if ($user->country == "arg")
                           <option value="arg" selected>Argentina</option>
                         @endif
-                        @if (Auth::user()->country == "uru")
+                        @if ($user->country == "uru")
                           <option value="uru" selected>Uruguay</option>
                         @endif
-                          @if (Auth::user()->country == "bra")
+                          @if ($user->country == "bra")
                           <option value="bra" selected>Brasil</option>
                         @endif
-                        @if (Auth::user()->country == "chi")
+                        @if ($user->country == "chi")
                           <option value="chi" selected>Chile</option>
                         @endif
-                        @if (Auth::user()->country == "col")
+                        @if ($user->country == "col")
                           <option value="col" selected>Colombia</option>
                         @endif
-                        @if (Auth::user()->country == "ven")
+                        @if ($user->country == "ven")
                           <option value="ven" selected>Venezuela</option>
                         @endif
                       </select>
@@ -93,7 +98,7 @@
                 <div class="input-group mb-3">
                   <div class="input-group-prepend">
                     <label class="form-check-label" for="mail">E-mail:</label>
-                    <input class="form-control  @error('email') is-invalid @enderror" id="mail" type="email" name="email" value="{{Auth::user()->email}}" readonly="readonly">
+                    <input class="form-control  @error('email') is-invalid @enderror" id="mail" type="email" name="email" value="{{$user->email}}" readonly="readonly">
                       @error('email')
                         <span class="invalid-feedback" role="alert">
                           <strong>{{ $message }}</strong>
@@ -121,7 +126,7 @@
                 <div class="input-group mb-3">
                   <div class="input-group-prepend">
                     <label class="form-check-label" for="confirmpass">Confirmar contraseña:</label>
-                    <input class="form-control @error('password') is-invalid @enderror" id="confirmpass" type="password" name="confirmpass" value="">
+                    <input class="form-control @error('password') is-invalid @enderror" id="confirmpass" type="password" name="password_confirmation" value="">
                       @error('password')
                           <span class="invalid-feedback" role="alert">
                             <strong>{{ $message }}</strong>
@@ -136,7 +141,7 @@
               <br>
               <div class="form-row">
                 <div class="form-group col-md-6">
-                    <input class="form-check-input" id="" type="radio" name="sale" value="si" @if (Auth::user()->sale == "si") checked @endif>
+                    <input class="form-check-input" id="" type="radio" name="sale" value="si" @if ($user->sale == "si") checked @endif>
                     <label class="form-check-label"> Sí</label>
                     @error('sale')
                       <span class="invalid-feedback" role="alert">
@@ -145,7 +150,7 @@
                     @enderror
                 </div>
                 <div class="form-group col-md-6">
-                    <input  class="form-check-input" id="" type="radio" name="sale" value="no" @if (Auth::user()->sale == "no") checked @endif>
+                    <input  class="form-check-input" id="" type="radio" name="sale" value="no" @if ($user->sale == "no") checked @endif>
                     <label class="form-check-label"> No</label>
                     @error('sale')
                       <span class="invalid-feedback" role="alert">

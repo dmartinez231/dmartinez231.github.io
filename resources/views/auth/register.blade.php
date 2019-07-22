@@ -127,7 +127,7 @@
 							<br>
 							<div class="form-row">
 								<div class="form-group col-md-6">
-										<input class="form-check-input @error('sale') is-invalid @enderror" id="saleSi" type="radio" name="sale" value="si" ><label class="form-check-label "> Sí</label>
+										<input class="form-check-input @error('sale') is-invalid @enderror" id="saleSi" type="radio" name="sale" value="si" @if(old('sale')=='si') checked @endif><label class="form-check-label "> Sí</label>
                     @error('sale')
                         <span class="invalid-feedback" role="alert">
                           <strong>{{ $message }}</strong>
@@ -135,7 +135,7 @@
                     @enderror
 								</div>
 								<div class="form-group col-md-6">
-										<input  class="form-check-input @error('sale') is-invalid @enderror" id="saleNo" type="radio" name="sale" value="no" ><label class="form-check-label"> No</label>
+										<input  class="form-check-input @error('sale') is-invalid @enderror" id="saleNo" type="radio" name="sale" value="no" @if(old('sale')=='no') checked @endif><label class="form-check-label"> No</label>
                     @error('sale')
                         <span class="invalid-feedback" role="alert">
                           <strong>{{ $message }}</strong>

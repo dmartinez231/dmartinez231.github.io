@@ -30,7 +30,6 @@ class AppServiceProvider extends ServiceProvider
         if(preg_match('/([12]\d{3}-(0[1-9]|1[0-2])-(0[1-9]|[12]\d|3[01]))/',$value) == 0){
           return false;
         }
-        dd($value);
         list($año,$mes,$dia) = explode('-',$value);
         //PREGUNTA SI ESTA VACIO Y SI ES NUMERICO
         if (empty($año) || empty($mes) || empty($dia) && !is_numeric($año) || !is_numeric($mes) || !is_numeric($dia)) {
@@ -55,7 +54,7 @@ class AppServiceProvider extends ServiceProvider
           return  false;
           }
           if ($mesActual == $mes){
-            if($diaActual < $dia){
+            if($diaActual <= $dia){
               return  false;
             }
           }

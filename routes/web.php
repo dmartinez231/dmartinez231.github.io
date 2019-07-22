@@ -28,6 +28,6 @@ Route::get('/home', 'HomeController@index');
 Route::group(['middleware' => 'auth'], function () {
 
   Route::get('/perfil', 'PerfilController@index')->name('perfil');
-  Route::post('/perfil','PerfilController@update')->name('actualizarPerfil');
+  Route::post('/perfil/{id}','PerfilController@update')->name('actualizarPerfil');
 
 });
