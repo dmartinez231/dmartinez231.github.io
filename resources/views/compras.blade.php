@@ -34,7 +34,7 @@ style ="background:none"
       <td>Mark</td>
       <td>Otto</td>
       <td>@mdo</td>
-      <td class="fa fa-edit"></td>
+      <td class="fa fa-edit" onclick="location.href = '{{ route('detalleProductos') }}'"></td>
       <td class="fa fa-trash"></td>
     </tr>
     <tr>
@@ -42,20 +42,20 @@ style ="background:none"
       <td>Jacob</td>
       <td>Thornton</td>
       <td>@fat</td>
-      <td class="fa fa-edit"></td>
+      <td class="fa fa-edit" onclick="location.href = '{{ route('detalleProductos') }}'"></td>
       <td class="fa fa-trash"></td>
     </tr>
     <tr>
       <th scope="row">3</th>
       <td colspan="2">Larry the Bird</td>
       <td>@twitter</td>
-      <td class="fa fa-edit"></td>
+      <td class="fa fa-edit" onclick="location.href = '{{ route('detalleProductos') }}'"></td>
       <td class="fa fa-trash"></td>
     </tr>
   </tbody>
 </table>
 <p align="right">Total $:</p>
-<p align="right">Seguir Comprando</p>
+<p align="right" onclick="location.href = '{{ route('productos') }}'"/>Seguir Comprando</p>
 </form>
 </div>
 </section>
