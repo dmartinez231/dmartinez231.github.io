@@ -17,6 +17,7 @@ Route::get('/install', function(){
 });
 Route::get('/','PageController@home')->name('home');
 Route::get('/productos','PageController@productos')->name('productos');
+Route::get('/detalleProductos','PageController@detalleProductos')->name('detalleProductos');
 Route::get('/compras', 'PageController@compras')->name('compras');
 
 Route::get('/formulario', 'FormularioController@index')->name('formulario');

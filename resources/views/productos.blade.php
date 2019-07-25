@@ -10,7 +10,7 @@
 <section class="container">
     <div>
 
-      <form  method="GET" action="{{ route('productos') }}" class="">
+      <form  method="GET" action="{{ route('detalleProductos') }}" class="">
         @csrf
 <div class="card-deck">
   <div class="card">

@@ -18,7 +18,9 @@ Route::get('/productos','PageController@productos')->name('productos');
 Route::get('/compras', 'PageController@compras')->name('compras');
 Route::get('/perfil', 'PageController@perfil')->name('perfil'); // nombre del usuario
 Route::get('/formulario', 'PageController@formulario')->name('formulario');
-Route::get('/detalleProductos', 'PageController@productos')->name('detalleProductos');
-
+//Route::get('/detalleProductos', 'PageController@detalleProductos')->name('detalleProductos');
+Route:: get ('/detalleProductos', function () {
+   return 'Welcome to inde';
+});
 
 Auth::routes();
