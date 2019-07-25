@@ -9,6 +9,7 @@
 	<link href="https://fonts.googleapis.com/css?family=Bad+Script" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
 	<link rel="stylesheet" type="text/css" href="css/style.css">
+	@yield('script')
 </head>
 <body id="body-home" class="login" @yield('background')>
 	@yield('video')
@@ -43,7 +44,7 @@
 							<a href="{{route('compras')}}">Compras</a>
 						</li>
 						<li>
-							<a href="{{route('perfil')}}">Bienvenido {{Auth::user()->name}}</a>
+							<a href="{{route('perfil')}}" style="color:red">Bienvenido {{Auth::user()->name}}</a>
 						</li>
 						<li>
 							<a href="{{ route('logout') }}"

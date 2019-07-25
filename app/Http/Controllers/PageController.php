@@ -36,15 +36,8 @@ class PageController extends Controller
     {
       return view('compras');
     }
-    public function perfil()
-    {
-      return view('perfil');
-    }
-    public function actualizarPerfil(){
-
-    }
     public function detalleProductos()
     {
       return view('detalleProductos');
     }
-}
+  }

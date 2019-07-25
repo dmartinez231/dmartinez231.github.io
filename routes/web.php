@@ -18,10 +18,16 @@ Route::get('/install', function(){
 Route::get('/','PageController@home')->name('home');
 Route::get('/productos','PageController@productos')->name('productos');
 Route::get('/compras', 'PageController@compras')->name('compras');
-Route::get('/perfil', 'PageController@perfil')->name('perfil');
+
 Route::get('/formulario', 'FormularioController@index')->name('formulario');
 Route::post('/formulario', 'FormularioController@store')->name('formulario');
-Route::post('/perfil','PageController@actualizarPerfil')->name('actualizarPerfil');
+
 
 Auth::routes();
 Route::get('/home', 'HomeController@index');
+Route::group(['middleware' => 'auth'], function () {
+
+  Route::get('/perfil', 'PerfilController@index')->name('perfil');
+  Route::post('/perfil/{id}','PerfilController@update')->name('actualizarPerfil');
+
+});
