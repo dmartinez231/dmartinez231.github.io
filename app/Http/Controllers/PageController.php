@@ -41,6 +41,10 @@ class PageController extends Controller
       return view('perfil');
     }
     public function actualizarPerfil(){
-      
+
+    }
+    public function detalleProductos()
+    {
+      return view('detalleProductos');
     }
 }
