@@ -47,7 +47,7 @@
           <div class="form-group col-md-6">
             <div class="input-group mb-3">
               <div class="input-group-prepend">
-                <label  class="form-check-label" for="stock">Disponbles:</label>
+                <label  class="form-check-label" for="stock">Disponibles:</label>
                 <input class="form-control @error('stock') is-invalid @enderror" id="stock" type="number" name="stock" value="{{ old('stock') }}" required autocomplete="stock" autofocus>
                 @error('stock')
                   <span class="invalid-feedback" role="alert">
