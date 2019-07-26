@@ -36,4 +36,8 @@ class PageController extends Controller
     {
       return view('compras');
     }
-}
+    public function detalleProductos()
+    {
+      return view('detalleProductos');
+    }
+  }
