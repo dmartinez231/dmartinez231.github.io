@@ -9,10 +9,12 @@
 <div class="registros">
 <section class="container">
     <div class="center">
-
-      <form  method="POST" action="{{ route('formulario') }}" class="border p-3 form">
+      <form  method="POST" action="{{ route('formulario_post') }}" class="border p-3 form" enctype="multipart/form-data">
         @csrf
         <h1 class="login">Cargar Productos</h1>
+        <div class='text-success'>
+          {{Session::get('status')}}
+        </div>
         <div class="form-group text-center">
         <hr>
           <div class="form-row">
@@ -61,7 +63,7 @@
             <div class="input-group mb-3">
               <div class="input-group-prepend">
                 <label  class="form-check-label" for="photo">Foto:</label>
-                <input class="form-control @error('photo') is-invalid @enderror" id="photo" type="text" name="photo" value="{{ old('photo') }}" required autocomplete="photo" autofocus>
+                <input class="form-control @error('photo') is-invalid @enderror" id="photo" type="file" name="photo" value="{{ old('photo') }}" required autocomplete="photo" autofocus>
                 @error('photo')
                   <span class="invalid-feedback" role="alert">
                     <strong>{{ $message }}</strong>

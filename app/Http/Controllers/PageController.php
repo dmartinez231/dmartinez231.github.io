@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Product;
 
 class PageController extends Controller
 {
@@ -30,7 +31,8 @@ class PageController extends Controller
     }
     public function productos()
     {
-      return view('productos');
+      $productos = Product::orderBy('id','DESC')->paginate(6);
+      return view('productos',compact('productos'));
     }
     public function compras()
     {

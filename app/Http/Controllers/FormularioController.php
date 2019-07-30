@@ -41,11 +41,13 @@ class FormularioController extends Controller
       $new_product->description = $request->input('description');
       $new_product->stock = $request->input('stock');
       $new_product->year = $request->input('year');
-      $new_product->photo = $request->input('photo');
-
+      $new_product->price= $request->input('price');
+      $route = $request['photo']->store('public/img');
+      $fileName = basename($route);
+      $new_product->photo = $fileName;
       $new_product->save();
 
-      return 'Producto Creado con éxito';
+      return redirect(route('formulario'))->with('status','El Producto fue creado con exito');
     }
 
     /**

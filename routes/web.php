@@ -21,7 +21,7 @@ Route::get('/detalleProductos','PageController@detalleProductos')->name('detalle
 Route::get('/compras', 'PageController@compras')->name('compras');
 
 Route::get('/formulario', 'FormularioController@index')->name('formulario');
-Route::post('/formulario', 'FormularioController@store')->name('formulario');
+Route::post('/formulario', 'FormularioController@store')->name('formulario_post');
 
 
 Auth::routes();
