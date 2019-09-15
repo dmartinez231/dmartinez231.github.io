@@ -12,16 +12,25 @@
 Route::get('/install', function(){
   Artisan::call('storage:link');
   Artisan::call('migrate');
-  Artisan::call('db:seed');
   return redirect('/');
 });
+Route::bind('product',function($id){
+  return App\Product::where('id',$id)->first();
+});
+
 Route::get('/','PageController@home')->name('home');
 Route::get('/productos','PageController@productos')->name('productos');
-Route::get('/detalleProductos','PageController@detalleProductos')->name('detalleProductos');
-Route::get('/compras', 'PageController@compras')->name('compras');
+Route::get('/detalleProductos/{id}','PageController@detalleProductos')->name('detalleproducto');
+Route::get('/compras/show', 'CartController@show')->name('compras-show');
+Route::get('/compras/add/{product}', 'CartController@add')->name('compras-add');
+Route::get('/compras/delete/{product}', 'CartController@delete')->name('compras-delete');
+Route::get('/compras/trash', 'CartController@trash')->name('compras-trash');
+Route::get('/compras/update/{product}/{quantity?}', 'CartController@update')->name('compras-update');
 
 Route::get('/formulario', 'FormularioController@index')->name('formulario');
 Route::post('/formulario', 'FormularioController@store')->name('formulario_post');
+
+Route::get('/thanks','PageController@thanks')->name('thanks');
 
 
 Auth::routes();

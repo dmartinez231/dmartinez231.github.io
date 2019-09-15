@@ -8,7 +8,10 @@
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 	<link href="https://fonts.googleapis.com/css?family=Bad+Script" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
-	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+	<script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="{{ asset('css/style.css') }}">
 	@yield('script')
 </head>
 <body id="body-home" class="login" @yield('background')>
@@ -28,7 +31,7 @@
 						<a href="{{route('productos')}}">Productos</a>
 					</li>
 					<li>
-						<a href="{{route('compras')}}">Compras</a>
+						<a href="{{route('compras-show')}}">Compras</a>
 					</li>
 					<li>
 						<a href="{{route('login')}}">Iniciar Sesion</a>
@@ -41,7 +44,7 @@
 							<a href="{{route('productos')}}">Productos</a>
 						</li>
 						<li>
-							<a href="{{route('compras')}}">Compras</a>
+							<a href="{{route('compras-show')}}">Compras</a>
 						</li>
 						<li>
 							<a href="{{route('perfil')}}" style="color:red">Bienvenido {{Auth::user()->name}}</a>

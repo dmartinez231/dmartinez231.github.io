@@ -12,51 +12,59 @@ style ="background-color: rgba(0,0,0,1)"
 @section('background')
 style ="background:none"
 @endsection
+@section('script')
+  <script type="text/javascript" src="/js/validar.js"></script>
+@endsection
 
 @section('section')
 <div>
 <section class="container">
     <div>
-      <form  method="GET" action="{{ route('compras') }}" class="">
-        @csrf
-            <table class="table table-hover">
-  <thead>
-    <tr>
-      <th scope="col"></th>
-      <th scope="col">Producto</th>
-      <th scope="col">Cantidad</th>
-      <th scope="col">Costo</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th scope="row">1</th>
-      <td>Mark</td>
-      <td>Otto</td>
-      <td>@mdo</td>
-      <td class="fa fa-edit" onclick="location.href = '{{ route('detalleProductos') }}'"></td>
-      <td class="fa fa-trash"></td>
-    </tr>
-    <tr>
-      <th scope="row">2</th>
-      <td>Jacob</td>
-      <td>Thornton</td>
-      <td>@fat</td>
-      <td class="fa fa-edit" onclick="location.href = '{{ route('detalleProductos') }}'"></td>
-      <td class="fa fa-trash"></td>
-    </tr>
-    <tr>
-      <th scope="row">3</th>
-      <td colspan="2">Larry the Bird</td>
-      <td>@twitter</td>
-      <td class="fa fa-edit" onclick="location.href = '{{ route('detalleProductos') }}'"></td>
-      <td class="fa fa-trash"></td>
-    </tr>
-  </tbody>
-</table>
-<p align="right">Total $:</p>
-<p align="right" onclick="location.href = '{{ route('productos') }}'"/>Seguir Comprando</p>
-</form>
+      @if(count($cart))
+        <table class="table table-hover">
+            <thead>
+              <tr>
+                <th>Imagen</th>
+                <th>Producto</th>
+                <th>Cantidad</th>
+                <th>Precio</th>
+                <th>Subtotal</th>
+                <th>Quitar</th>
+              </tr>
+            </thead>
+            <tbody>
+              @foreach($cart as $item)
+              <tr>
+                <th><img style="width:50px" src="/storage/img/{{$item->photo}}" alt="{{$item->name}}"></th>
+                <td>{{$item->name}}</td>
+                <td> <input
+                        type="number"
+                        min="1"
+                        max="{{$item->stock}}"
+                        value="{{$item->quantity}}"
+                        id="product_{{$item->id}}">
+                     <a href="#"
+                        class="btn btn-warning btn-update-item"
+                        data-href="{{route('compras-update',$item->id)}}"
+                        data-id="{{$item->id}}">
+                     <i class="fa fa-refresh"></i> </a>
+                </td>
+                <td>{{$item->price}}</td>
+                <td>{{$item->price * $item->quantity}} </td>
+                <td>
+                   <a href="{{route('compras-delete',$item->id)}}" class="btn btn-danger"> <i class="fa fa-remove"></i>  </a>
+                </td>
+              </tr>
+          @endforeach
+          </tbody>
+        </table>
+      @else
+        <h3 class="text-center"><span class="label label-warning">No hay productos en el carrito</span></h3>
+      @endif
+<h3> <span class="label label-success"> Total $: {{$total}}</span></h3>
+<button class="btn btn-danger" align="right"><a href="{{ route('productos') }}">Seguir Comprando</a></button>
+<button class="btn btn-danger"> <a href="{{route('compras-trash')}}">Vaciar carrito</a></button>
+<a href="{{route('thanks')}}"><h3> <span class="label label-success">Finalizar compra</span></h3></a>
 </div>
 </section>
 </div>

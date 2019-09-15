@@ -27,19 +27,20 @@ class PageController extends Controller
       				"titulo" => "Pink Grape",
       				"descripcion" => "El vino rosado. Casi siempre cuando hablamos de vino solemos pensar en vinos tintos o en vinos blancos, pero poco se tiene en cuenta el vino rosado, con su color particular, su carácter y elegancia que hace despertar el gusto en todos los sentidos. Elegante y versátil, así es el vino rosado con una historia dudosa."]
       ];
-      return view('index')->with('articulosHome',$articulosHome);
+      return view('index',compact('articulosHome'));
     }
     public function productos()
     {
-      $productos = Product::orderBy('id','DESC')->paginate(6);
+      $productos = Product::orderBy('id')->paginate(6);
       return view('productos',compact('productos'));
     }
-    public function compras()
+    public function detalleProductos($id)
     {
-      return view('compras');
+      $producto=Product::where('id',$id)->first();
+      return view('detalleProductos',compact('producto'));
     }
-    public function detalleProductos()
+    public function thanks()
     {
-      return view('detalleProductos');
+      return with('Muchas gracias por su compra');
     }
   }
