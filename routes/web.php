@@ -27,17 +27,22 @@ Route::get('/compras/delete/{product}', 'CartController@delete')->name('compras-
 Route::get('/compras/trash', 'CartController@trash')->name('compras-trash');
 Route::get('/compras/update/{product}/{quantity?}', 'CartController@update')->name('compras-update');
 
-Route::get('/formulario', 'FormularioController@index')->name('formulario');
-Route::post('/formulario', 'FormularioController@store')->name('formulario_post');
 
-Route::get('/thanks','PageController@thanks')->name('thanks');
+
 
 
 Auth::routes();
 Route::get('/home', 'HomeController@index');
 Route::group(['middleware' => 'auth'], function () {
 
+  //Carga de Productos
+  Route::get('/formulario', 'FormularioController@index')->name('formulario');
+  Route::post('/formulario', 'FormularioController@store')->name('formulario_post');
+  //Validar Perfil
   Route::get('/perfil', 'PerfilController@index')->name('perfil');
   Route::post('/perfil/{id}','PerfilController@update')->name('actualizarPerfil');
+  //Validar Compra
+  Route::get('/detalle','CartController@detalle')->name('compras-detalle');
+  Route::get('/thanks','CartController@thanks')->name('thanks');
 
 });

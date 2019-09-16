@@ -5,10 +5,10 @@ namespace App;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
 
-
-class Product extends Model
+class Cart extends Model
 {
-    protected $table = 'products';
+  protected $table = 'carts';
+  protected $guarded = [];
 
-    public $timestamps = true;
+  public $timestamps = true;
 }

@@ -31,7 +31,7 @@ class PageController extends Controller
     }
     public function productos()
     {
-      $productos = Product::orderBy('id')->paginate(6);
+      $productos = Product::all();
       return view('productos',compact('productos'));
     }
     public function detalleProductos($id)
@@ -39,8 +39,5 @@ class PageController extends Controller
       $producto=Product::where('id',$id)->first();
       return view('detalleProductos',compact('producto'));
     }
-    public function thanks()
-    {
-      return with('Muchas gracias por su compra');
-    }
+
   }

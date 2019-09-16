@@ -119,5 +119,12 @@ class AppServiceProvider extends ServiceProvider
         }
         return true;
       });
+      Validator::extend('ext',function($attribute,$value,$parameters){
+        $ext = pathinfo($value, PATHINFO_EXTENSION);
+        if ($ext == 'jpeg' || $ext == 'png' || $ext == 'jpg'){
+          return true;
+        }
+        return false;
+      });
     }
 }

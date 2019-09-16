@@ -20,6 +20,9 @@ style ="background:none"
 <div>
 <section class="container">
     <div>
+      <div class='text-success'>
+        {{Session::get('status')}}
+      </div>
       @if(count($cart))
         <table class="table table-hover">
             <thead>
@@ -64,7 +67,7 @@ style ="background:none"
 <h3> <span class="label label-success"> Total $: {{$total}}</span></h3>
 <button class="btn btn-danger" align="right"><a href="{{ route('productos') }}">Seguir Comprando</a></button>
 <button class="btn btn-danger"> <a href="{{route('compras-trash')}}">Vaciar carrito</a></button>
-<a href="{{route('thanks')}}"><h3> <span class="label label-success">Finalizar compra</span></h3></a>
+<a href="{{route('compras-detalle')}}"><h3> <span class="label label-success">Finalizar compra</span></h3></a>
 </div>
 </section>
 </div>
